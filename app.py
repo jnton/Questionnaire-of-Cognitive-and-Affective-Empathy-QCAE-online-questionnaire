@@ -46,7 +46,7 @@ st.session_state.QCAE_items = [
     "Before I do something I try to consider how my friends will react to it."
 ]
 
-QCAE_options = [
+st.session_state.QCAE_options = [
     "Strongly agree",
     "Slightly agree",
     "Slightly disagree",

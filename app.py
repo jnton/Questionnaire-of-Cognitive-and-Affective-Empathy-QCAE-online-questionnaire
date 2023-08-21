@@ -4,6 +4,10 @@ import streamlit.components.v1 as components
 import webbrowser
 import json
 
+st.set_page_config(
+    page_title="Questionnaire of Cognitive and Affective Empathy (QCAE)",
+)
+
 # Define the questionnaire items and response options
 QCAE_items = [
     "I sometimes find it difficult to see things from the “other guy’s” point of view.",

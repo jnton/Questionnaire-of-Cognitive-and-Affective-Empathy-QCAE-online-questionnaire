@@ -8,6 +8,9 @@ st.set_page_config(
     page_title="Questionnaire of Cognitive and Affective Empathy (QCAE)",
 )
 
+st.subheader("Questionnaire of Cognitive and Affective Empathy")
+st.markdown('<p style="font-size: 10px;">Renate L. E. P. Reniers, Rhiannon Corcoran, Richard Drake, Nick M. Shryane & Birgit A. Völlm (2011). The QCAE: A Questionnaire of Cognitive and Affective Empathy. <i>Journal of Personality Assessment.</i> <a href="https://doi.org/10.1080/00223891.2010.528484">https://doi.org/10.1080/00223891.2010.528484</a></p>', unsafe_allow_html=True)
+
 # Define the questionnaire items and response options
 QCAE_items = [
     "I sometimes find it difficult to see things from the “other guy’s” point of view.",

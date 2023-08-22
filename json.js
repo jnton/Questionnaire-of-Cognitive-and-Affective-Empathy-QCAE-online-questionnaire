@@ -235,24 +235,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -274,24 +265,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -313,24 +295,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -352,24 +325,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -391,24 +355,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -430,24 +385,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -469,24 +415,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -508,24 +445,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -547,24 +475,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -586,24 +505,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -625,24 +535,15 @@ const json = {
      "choices": [
       {
        "value": "1",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "4",
@@ -664,24 +565,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -703,24 +595,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -742,24 +625,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -781,24 +655,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -820,24 +685,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -859,24 +715,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -898,25 +745,13 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
-      {
-       "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
-      },
+      "2",
       {
        "value": "1",
        "text": "Strongly disagree"
@@ -937,25 +772,10 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
-      {
-       "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
-      },
-      {
-       "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
-      },
+      "3",
+      "2",
       {
        "value": "1",
        "text": "Strongly disagree"
@@ -976,24 +796,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -1015,24 +826,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -1054,24 +856,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -1093,24 +886,15 @@ const json = {
      "choices": [
       {
        "value": "1",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "4",
@@ -1132,24 +916,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",
@@ -1171,24 +946,15 @@ const json = {
      "choices": [
       {
        "value": "4",
-       "text": {
-        "default": "Strongly agree",
-        "fr": "D"
-       }
+       "text": "Strongly agree"
       },
       {
        "value": "3",
-       "text": {
-        "default": "Slightly agree",
-        "fr": "d"
-       }
+       "text": "Slightly agree"
       },
       {
        "value": "2",
-       "text": {
-        "default": "Slightly disagree",
-        "fr": "d"
-       }
+       "text": "Slightly disagree"
       },
       {
        "value": "1",

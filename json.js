@@ -309,6 +309,7 @@ const json = {
       "de": "Die Menschen, mit denen ich zusammen bin, haben einen starken Einfluss auf meine Stimmung."
      },
      "isRequired": true,
+     "choicesFromQuestion": "question3",
      "choices": [
       {
        "value": "4",
@@ -1248,9 +1249,21 @@ const json = {
      "title": "Affective empathy",
      "expression": "{subscale3} + {subscale4} + {subscale5}",
      "format": "{0}"
+    },
+    {
+     "type": "expression",
+     "name": "totalscore",
+     "title": "Total QCAE score",
+     "expression": "{scale1} + {scale2}",
+     "format": "{0}"
     }
    ]
   }
  ],
- "showPageTitles": false
+ "showPageTitles": false,
+ "showProgressBar": "top",
+ "progressBarType": "questions",
+ "maxTextLength": 70,
+ "maxOthersLength": 70,
+ "showPreviewBeforeComplete": "showAllQuestions"
 }

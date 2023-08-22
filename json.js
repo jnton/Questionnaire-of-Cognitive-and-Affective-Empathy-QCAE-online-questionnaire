@@ -1196,6 +1196,60 @@ const json = {
      ]
     }
    ]
+  },
+  {
+   "name": "page2",
+   "elements": [
+    {
+     "type": "expression",
+     "name": "subscale1",
+     "title": "Perspective taking",
+     "expression": "{question15} + {question16} + {question19} + {question20} + {question21} + {question22} + {question24} + {question25} + {question26} + {question27}",
+     "format": "{0}"
+    },
+    {
+     "type": "expression",
+     "name": "subscale2",
+     "title": "Online simulation",
+     "expression": "{question1} + {question3} + {question4} + {question5} + {question6} + {question18} + {question28} + {question30} + {question31}",
+     "format": "{0}"
+    },
+    {
+     "type": "expression",
+     "name": "subscale3",
+     "title": "Emotion contagion",
+     "expression": "{question8} + {question9} + {question13} + {question14}",
+     "format": "{0}"
+    },
+    {
+     "type": "expression",
+     "name": "subscale4",
+     "title": "Proximal responsivity",
+     "expression": "{question7} + {question10} + {question12} + {question23}",
+     "format": "{0}"
+    },
+    {
+     "type": "expression",
+     "name": "subscale5",
+     "title": "Peripheral responsivity",
+     "expression": " {question2} + {question11} + {question17} + {question29}",
+     "format": "{0}"
+    },
+    {
+     "type": "expression",
+     "name": "scale1",
+     "title": "Cognitive empathy",
+     "expression": "{subscale1} + {subscale2}",
+     "format": "{0}"
+    },
+    {
+     "type": "expression",
+     "name": "scale2",
+     "title": "Affective empathy",
+     "expression": "{subscale3} + {subscale4} + {subscale5}",
+     "format": "{0}"
+    }
+   ]
   }
  ],
  "showPageTitles": false

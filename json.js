@@ -10,7 +10,7 @@ const json = {
   "rs": "Jovan Ivanović, Aleksandra Lazić, Lili Lazarevic, Iris Zezelj, and Danka Purić (2020).  Questionnaire of Cognitive and Affective Empathy - QCAE. https://doi.org/10.17605/OSF.IO/MEZ5N",
   "de": "Henryk Bukowski, Claus Lamm, and Giorgia Silani (2019). When differences matter: rTMS/fMRI reveals how differences in dispositional empathy translate to distinct neural underpinnings of self-other distinction in empathy. https://doi.org/10.17605/OSF.IO/HFNK5",
   "fr": "Brunet-Gouet Eric, Myszkowski Nils, Ehrminger Mickael, Urbach Mathieu, Aouizerate Bruno, Brunel Lore, Capdevielle Delphine, Chereau Isabelle, Dubertret Caroline, Dubreucq Julien, Fond Guillaume, Lan￧on Christophe, Leignier Sylvain, Mallet Jasmina, Misdrahi David, Pires Sylvie, Schneider Priscille, Schurhoff Franck, Yazbek Hanan, Zinetti-Bertschy Anna, Bazin Nadine, Passerieux Christine, Zenasni Franck, Roux Paul (2019). Frontiers in Psychiatry. https://doi.org/10.3389/fpsyt.2019.00751",
-  "pt": "Queir￳s, Fernandes, Reniers, Sampaio, Coutinho and Seara-Cardoso (2018). "
+  "pt": "Queir￳s, Fernandes, Reniers, Sampaio, Coutinho and Seara-Cardoso (2018). Psychometric properties of the questionnaire of cognitive and affective empathy in a Portuguese sample. https://doi.org/10.1371/journal.pone.0197755"
  },
  "logoPosition": "right",
  "pages": [
@@ -213,7 +213,7 @@ const json = {
       "fr": "Avant de critiquer quelqu’un, j’essaie d’imaginer ce que je ressentirais si j’étais à sa place.",
       "default": "Before criticizing somebody, I try to imagine how I would feel if I was in their place.",
       "rs": "Pre nego što kritikujem nekog, pokušavam ta zamislim kako bih se ja osećao na njegovom mestu",
-      "de": "Bevor ich jemanden kritisiere, versuche ich mir vorzustellen, wie ich mich an seiner Stelle f￼hlen w￼rde.",
+      "de": "Bevor ich jemanden kritisiere, versuche ich mir vorzustellen, wie ich mich an seiner Stelle fühlen würde.",
       "pt": "Antes de criticar alguém, tento imaginar como me sentiria se estivesse no seu lugar"
      },
      "isRequired": true,
@@ -492,7 +492,7 @@ const json = {
       "default": "I can easily tell if someone else wants to enter a conversation.",
       "rs": "Lako primetim kada neko želi da se priključi razgovoru",
       "de": "Ich erkenne leicht, ob jemand an einem Gespr￤ch interessiert ist.",
-      "pt": "Consigo perceber facilmente quando algu￩m quer entrar numa conversa"
+      "pt": "Consigo perceber facilmente quando alguém quer entrar numa conversa"
      },
      "isRequired": true,
      "choicesFromQuestion": "question3",

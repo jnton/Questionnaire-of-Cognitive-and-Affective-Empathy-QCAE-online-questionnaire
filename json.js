@@ -306,7 +306,8 @@ const json = {
       "fr": "Les gens avec qui je suis ont une forte influence sur mon humeur.",
       "rs": "Ljudi sa kojima sam imaju jak uticaj na moje raspoloženje",
       "de": "Die Menschen, mit denen ich zusammen bin, haben einen starken Einfluss auf meine Stimmung.",
-      "pt": "As pessoas com quem estou têm uma grande influência no meu humor"
+      "pt": "As pessoas com quem estou têm uma grande influência no meu humor",
+      "default": "People I am with have a strong influence onmy mood."
      },
      "isRequired": true,
      "choicesFromQuestion": "question3",
@@ -553,7 +554,8 @@ const json = {
       "fr": "Il est difficile pour moi de voir pourquoi certaines choses soucient autant les gens.",
       "rs": "Teško mi je da uvidim zašto neke stvari toliko pogađaju druge ljude",
       "de": "Es fällt mir schwer zu verstehen, warum manche Dinge Leute so sehr aufregen.",
-      "pt": "É difícil para mim compreender porque é que algumas coisas perturbam tanto as pessoas"
+      "pt": "É difícil para mim compreender porque é que algumas coisas perturbam tanto as pessoas",
+      "default": " It is hard for me to see why some thingsupset people so much."
      },
      "isRequired": true,
      "choicesFromQuestion": "question1",
@@ -783,7 +785,10 @@ const json = {
        "value": "3",
        "text": "Slightly agree"
       },
-      "2",
+      {
+       "value": "2",
+       "text": "Slightly disagree"
+      },
       {
        "value": "1",
        "text": "Strongly disagree"
@@ -807,8 +812,14 @@ const json = {
        "value": "4",
        "text": "Strongly agree"
       },
-      "3",
-      "2",
+      {
+       "value": "3",
+       "text": "Slightly agree"
+      },
+      {
+       "value": "2",
+       "text": "Slightly disagree"
+      },
       {
        "value": "1",
        "text": "Strongly disagree"

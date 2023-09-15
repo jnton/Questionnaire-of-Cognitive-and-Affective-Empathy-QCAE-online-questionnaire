@@ -307,7 +307,7 @@ const json = {
       "rs": "Ljudi sa kojima sam imaju jak uticaj na moje raspoloženje",
       "de": "Die Menschen, mit denen ich zusammen bin, haben einen starken Einfluss auf meine Stimmung.",
       "pt": "As pessoas com quem estou têm uma grande influência no meu humor",
-      "default": "People I am with have a strong influence onmy mood."
+      "default": "People I am with have a strong influence on my mood."
      },
      "isRequired": true,
      "choicesFromQuestion": "question3",

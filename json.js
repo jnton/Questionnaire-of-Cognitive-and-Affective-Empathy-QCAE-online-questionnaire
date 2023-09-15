@@ -72,7 +72,7 @@ const json = {
       "fr": "D’habitude je garde mon objectivité quand je regarde un film ou quand je joue, et je ne me laisse pas souvent entrainer complètement dedans.",
       "default": "I am usually objective when I watch a film or play, and I don’t often get completely caught up in it.",
       "rs": "Obično sam objektivan kada gledam film ili predstavu i ne dešava mi se često da se udubim u njih",
-      "de": "Wenn ich mir einen Film oder ein Theaterst￼ck ansehe, bleibe ich normalerweise objektiv und gehe selten darin auf.",
+      "de": "Wenn ich mir einen Film oder ein Theaterstück ansehe, bleibe ich normalerweise objektiv und gehe selten darin auf.",
       "pt": "Quando vejo um filme ou uma pe￧a de teatro, normalmente sou objetivo(a) e n￣o costumo envolver-me totalmente"
      },
      "isRequired": true,
@@ -555,7 +555,7 @@ const json = {
       "rs": "Teško mi je da uvidim zašto neke stvari toliko pogađaju druge ljude",
       "de": "Es fällt mir schwer zu verstehen, warum manche Dinge Leute so sehr aufregen.",
       "pt": "É difícil para mim compreender porque é que algumas coisas perturbam tanto as pessoas",
-      "default": " It is hard for me to see why some thingsupset people so much."
+      "default": " It is hard for me to see why some things upset people so much."
      },
      "isRequired": true,
      "choicesFromQuestion": "question1",

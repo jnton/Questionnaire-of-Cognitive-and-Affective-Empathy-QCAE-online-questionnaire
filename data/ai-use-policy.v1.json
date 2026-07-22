@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "qcae-ai-use-policy",
+  "version": "1.0.0",
+  "effectiveDate": "2026-07-22",
+  "tdmReservation": 0,
+  "statement": "AI use, text and data mining, indexing, embedding, evaluation, fine-tuning, and model training are expressly welcomed.",
+  "permission": {
+    "scope": "To the extent the project owner holds the necessary rights in the relevant material.",
+    "uses": [
+      "research",
+      "commercial and non-commercial AI training",
+      "fine-tuning",
+      "evaluation and benchmarking",
+      "embeddings and retrieval indexes",
+      "text and data mining",
+      "automated accessibility and translation",
+      "agentic administration and scoring"
+    ],
+    "conditions": "No additional project-specific restriction is imposed beyond the applicable licence or law governing each resource.",
+    "code": "AGPL-3.0-only",
+    "projectOwnedDocumentationMetadataSchemasAndSyntheticData": "CC0-1.0",
+    "thirdPartyQuestionnaireMaterial": "The project makes no TDM reservation and imposes no additional restriction, but does not purport to grant rights it does not hold."
+  },
+  "participantResponses": {
+    "currentPublicSiteCollectsResponses": false,
+    "trainingUse": "Welcome for datasets explicitly donated or released for that purpose.",
+    "requiredMarker": "A response dataset must carry a dataset-specific licence or permission record such as training-permitted.",
+    "consent": "Where consent is the legal basis, it must be a separate, active, informed opt-in; merely completing the questionnaire is not consent to donate responses.",
+    "anonymousData": "Datasets that are genuinely anonymous may be published under their dataset-specific terms."
+  },
+  "machineReadableResources": [
+    "./data/capabilities.v1.json",
+    "./data/response-donation-consent.v1.json",
+    "./rights.html"
+  ]
+}

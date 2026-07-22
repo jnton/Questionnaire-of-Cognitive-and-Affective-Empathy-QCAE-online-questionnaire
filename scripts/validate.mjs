@@ -1,18 +1,24 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import { loadInstrument, loadReferenceRegistry } from "../src/qcae-api.js";
 
 const readJson = async (path) => JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
-const instrument = await readJson("../data/qcae.v1.json");
+const instrument = await loadInstrument();
+const baseInstrument = await readJson("../data/qcae.v1.json");
 const compact = await readJson("../data/qcae.v1.min.json");
-const ui = await readJson("../data/ui.json");
-const references = await readJson("../data/references.v1.json");
+const baseUi = await readJson("../data/ui.json");
+const uiPacks = await readJson("../data/ui-packs.v1.json");
+const ui = { ...baseUi };
+for (const [locale, values] of Object.entries(uiPacks.locales ?? {})) ui[locale] = { ...baseUi.en, ...values };
+const references = await loadReferenceRegistry();
 const referenceIds = new Set(references.references.map((reference) => reference.id));
 const locales = Object.keys(instrument.variants);
+const itemById = new Map(instrument.items.map((item) => [item.id, item]));
 
 assert.equal(instrument.items.length, 31);
 assert.deepEqual(instrument.items.map((item) => item.id), Array.from({ length: 31 }, (_, i) => i + 1));
 assert.deepEqual(instrument.reverseScoredItems, [1, 2, 17, 29]);
-assert.deepEqual(compact, instrument, "Compact and readable instrument files differ");
+assert.deepEqual(compact, baseInstrument, "Compact and readable base instrument files differ");
 assert.equal(referenceIds.size, references.references.length, "Duplicate reference IDs");
 
 const requiredUiKeys = Object.keys(ui.en).sort();
@@ -23,7 +29,7 @@ for (const locale of locales) {
   assert.equal(new Set(variant.items).size, variant.items.length, `Duplicate active item in ${locale}`);
   assert(variant.sources?.length, `Missing sources for ${locale}`);
   for (const id of variant.sources) assert(referenceIds.has(id), `Unknown reference '${id}' in ${locale}`);
-  for (const item of instrument.items) assert(item.text[locale], `Missing ${locale} item ${item.id}`);
+  for (const id of variant.items) assert(itemById.get(id)?.text[locale], `Missing ${locale} text for active item ${id}`);
   assert.equal(instrument.responseScale.labels[locale].length, 4);
 }
 
@@ -40,4 +46,4 @@ for (const subscale of instrument.subscales) {
   }
 }
 assert.equal(assigned.size, 31);
-console.log("Instrument, translations, variants, references, UI, and scoring metadata are internally consistent.");
+console.log("Instrument, locale packs, translations, variants, references, UI, and scoring metadata are internally consistent.");

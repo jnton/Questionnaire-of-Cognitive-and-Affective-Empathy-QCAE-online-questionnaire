@@ -1,16 +1,81 @@
 import { activeItemIds, calculateRanges, scoreQcae } from "./scoring.js";
 
 export const DEFAULT_INSTRUMENT_URL = new URL("../data/qcae.v1.json", import.meta.url);
+export const DEFAULT_LOCALE_PACKS_URL = new URL("../data/locale-packs.v1.json", import.meta.url);
+export const DEFAULT_REFERENCES_URL = new URL("../data/references.v1.json", import.meta.url);
+export const DEFAULT_REFERENCE_PACKS_URL = new URL("../data/reference-packs.v1.json", import.meta.url);
 
-export async function loadInstrument(url = DEFAULT_INSTRUMENT_URL) {
-  const target = url instanceof URL ? url : new URL(url, DEFAULT_INSTRUMENT_URL);
+async function loadJson(url) {
+  const target = url instanceof URL ? url : new URL(url, import.meta.url);
   if (target.protocol === "file:") {
     const { readFile } = await import("node:fs/promises");
     return JSON.parse(await readFile(target, "utf8"));
   }
   const response = await fetch(target, { cache: "no-store" });
-  if (!response.ok) throw new Error(`Unable to load QCAE instrument (${response.status}).`);
+  if (!response.ok) throw new Error(`Unable to load QCAE resource (${response.status}): ${target}`);
   return response.json();
+}
+
+export function applyLocalePacks(instrument, packs) {
+  const merged = structuredClone(instrument);
+  merged.variants ??= {};
+  merged.responseScale.labels ??= {};
+  const itemById = new Map(merged.items.map((item) => [item.id, item]));
+
+  for (const [locale, pack] of Object.entries(packs?.locales ?? {})) {
+    merged.variants[locale] = structuredClone(pack.variant);
+    merged.responseScale.labels[locale] = [...pack.responseLabels];
+    for (const [rawId, text] of Object.entries(pack.itemText ?? {})) {
+      const item = itemById.get(Number(rawId));
+      if (!item) throw new Error(`Locale pack '${locale}' references unknown item ${rawId}.`);
+      item.text[locale] = text;
+    }
+  }
+  if (packs?.instrumentVersion) merged.version = packs.instrumentVersion;
+  merged.localePacks = {
+    id: packs?.id ?? null,
+    version: packs?.version ?? null,
+    source: "./data/locale-packs.v1.json"
+  };
+  return merged;
+}
+
+export function applyReferencePacks(registry, packs) {
+  const merged = structuredClone(registry);
+  const referenceById = new Map(merged.references.map((reference) => [reference.id, reference]));
+
+  for (const [id, update] of Object.entries(packs?.referenceUpdates ?? {})) {
+    if (!referenceById.has(id)) throw new Error(`Reference pack updates unknown reference '${id}'.`);
+    Object.assign(referenceById.get(id), structuredClone(update));
+  }
+  for (const [locale, mapping] of Object.entries(packs?.activeVariants ?? {})) {
+    merged.activeVariants[locale] = structuredClone(mapping);
+  }
+  const remove = new Set(packs?.removeCandidateLocales ?? []);
+  merged.integrationCandidates = merged.integrationCandidates.filter((candidate) => !remove.has(candidate.locale));
+  merged.version = "1.1.0";
+  merged.referencePacks = {
+    id: packs?.id ?? null,
+    version: packs?.version ?? null,
+    source: "./data/reference-packs.v1.json"
+  };
+  return merged;
+}
+
+export async function loadInstrument(
+  url = DEFAULT_INSTRUMENT_URL,
+  localePacksUrl = DEFAULT_LOCALE_PACKS_URL
+) {
+  const [instrument, packs] = await Promise.all([loadJson(url), loadJson(localePacksUrl)]);
+  return applyLocalePacks(instrument, packs);
+}
+
+export async function loadReferenceRegistry(
+  url = DEFAULT_REFERENCES_URL,
+  referencePacksUrl = DEFAULT_REFERENCE_PACKS_URL
+) {
+  const [registry, packs] = await Promise.all([loadJson(url), loadJson(referencePacksUrl)]);
+  return applyReferencePacks(registry, packs);
 }
 
 export function listVariants(instrument) {

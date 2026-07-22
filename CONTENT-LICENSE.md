@@ -1,4 +1,4 @@
-# Content, AI, and dataset permissions
+# Content and AI permissions
 
 ## Affirmative AI/TDM permission
 
@@ -36,13 +36,6 @@ Language provenance is maintained in `data/references.v1.json` and `data/referen
 - Russian: validated 29-item form from Okatova (2021).
 - Korean: validated 26-item K-QCAE from Kim (2018).
 
-## Participant-response datasets
+## Deployment data boundary
 
-The public site currently collects no participant responses. Response datasets are welcome for AI training when either:
-
-1. the records are genuinely anonymous; or
-2. participants actively donate them under a dataset-specific permission covering the intended training and release uses.
-
-The repository supplies `data/response-donation-consent.v1.json` as a future implementation template. Questionnaire completion alone is not treated as data donation.
-
-Each released dataset should carry its own licence or permission marker, provenance, data dictionary, and anonymisation or consent record.
+The public deployment has no response-submission endpoint. It does not receive, store, transmit, analyse, or otherwise process questionnaire responses on a server. Browser responses remain in browser memory; API and CLI response objects remain within the environment that invokes them. Any downstream processing performed by an external user, application, or agent is outside this deployment.

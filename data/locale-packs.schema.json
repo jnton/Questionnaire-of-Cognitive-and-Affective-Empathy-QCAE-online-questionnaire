@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/locale-packs.schema.json",
+  "title": "QCAE locale packs",
+  "type": "object",
+  "required": ["id", "version", "instrumentVersion", "locales"],
+  "properties": {
+    "id": {"const": "qcae-locale-packs"},
+    "version": {"type": "string"},
+    "instrumentVersion": {"type": "string"},
+    "locales": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["variant", "responseLabels", "itemText"],
+        "properties": {
+          "variant": {"type": "object"},
+          "responseLabels": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "string"}},
+          "itemText": {"type": "object", "additionalProperties": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

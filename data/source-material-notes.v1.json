@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "reviewedOn": "2026-07-22",
+  "materials": {
+    "italian": {
+      "referenceId": "di-girolamo-2019",
+      "finding": "The supplied article validates a 31-item Italian translation and compares paper and online administration, but does not reproduce the exact Italian item wording.",
+      "integrationStatus": "awaiting exact translated item file"
+    },
+    "chinese": {
+      "referenceId": "liang-2019",
+      "finding": "The supplied article confirms permission, translation, back-translation, pilot testing, and a final 31-item form, but does not reproduce the exact Chinese item wording.",
+      "integrationStatus": "awaiting exact translated item file"
+    },
+    "russian": {
+      "referenceId": "okatova-2021",
+      "finding": "Appendix 1 supplies all 29 items, response anchors, excluded items, and scoring key.",
+      "integrationStatus": "active"
+    },
+    "korean": {
+      "referenceId": "kim-2018",
+      "finding": "The supplied Appendix 3 supplies all 26 K-QCAE items and response anchors.",
+      "integrationStatus": "active"
+    }
+  }
+}

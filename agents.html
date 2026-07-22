@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Machine-readable endpoints, local scoring API, CLI, schemas, and agent interaction guidance for QCAE"><meta name="robots" content="index,follow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<link rel="canonical" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/agents.html"><link rel="stylesheet" href="./assets/styles.css"><title>Agents and developers — QCAE</title></head>
+<body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><a class="brand" href="./">QCAE</a><nav class="top-nav" aria-label="Project navigation">
+<a href="./">Questionnaire</a><a href="./about.html">About</a><a href="./references.html">References</a><a href="./agents.html">Agents &amp; developers</a>
+</nav></header>
+<main id="content" class="container document" tabindex="-1">
+<header class="document-header"><p class="eyebrow">Programmatic access</p><h1>Agents and developers</h1><p class="lead">Every scoring operation can be performed locally without submitting participant responses to a server.</p></header>
+<section><h2>Discovery</h2><div class="endpoint-list">
+<p><code>data/capabilities.v1.json</code> — versioned operation and endpoint manifest</p>
+<p><code>llms.txt</code> and <code>llms-full.txt</code> — concise and expanded agent guidance</p>
+<p><code>data/qcae.v1.json</code> — canonical instrument, variants, items, scoring, and translation metadata</p>
+<p><code>data/references.v1.json</code> — papers, source records, active mappings, and integration candidates</p></div></section>
+<section><h2>Browser or JavaScript scoring</h2><pre><code>import { loadInstrument, scoreResponseDocument } from
+  "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/src/qcae-api.js";
+
+const instrument = await loadInstrument();
+const result = scoreResponseDocument(instrument, {
+  locale: "en",
+  responses: { "1": 2, "2": 3 /* ... all required items ... */ }
+});</code></pre><p>The module also exports variant listing, range calculation access, normalization, and validation helpers. It performs no telemetry or persistence.</p></section>
+<section><h2>Command line</h2><pre><code>node bin/qcae-score.mjs --list-variants
+node bin/qcae-score.mjs examples/responses.en.synthetic.json
+cat responses.json | node bin/qcae-score.mjs --locale tr -</code></pre></section>
+<section><h2>Browser automation</h2><p>The human questionnaire uses semantic HTML, stable IDs, labels, fieldsets, and <code>data-qcae-*</code> attributes. Select a locale with <code>?lang=en</code>, <code>?lang=fr</code>, <code>?lang=pt-PT</code>, <code>?lang=de</code>, <code>?lang=sr-Latn</code>, or <code>?lang=tr</code>. A read-only <code>window.QCAE_APP</code> object exposes version, locale, progress, current variant metadata, capability URL, and completed result export.</p></section>
+<section><h2>Contracts</h2><ul><li><a href="./data/qcae.schema.json">Instrument schema</a></li><li><a href="./data/responses.schema.json">Response-input schema</a></li><li><a href="./data/results.schema.json">Result schema</a></li><li><a href="./data/references.schema.json">Reference-registry schema</a></li><li><a href="./examples/responses.en.synthetic.json">Synthetic input example</a></li></ul></section>
+<section><h2>Compatibility boundary</h2><p>There is no universal protocol implemented by every AI agent. This project supplies open web files, JSON, JSON Schema, ES modules, a CLI, semantic HTML, and explicit capability metadata so agents can integrate without scraping undocumented internals. Technical accessibility does not override content licences, consent requirements, or data-protection obligations.</p></section>
+</main><footer class="site-footer"><div class="container footer-inner"><p>QCAE Online · privacy-first static software</p><nav aria-label="Project information"><a href="./about.html">About</a><a href="./privacy.html">Privacy</a><a href="./rights.html">Rights</a><a href="./references.html">References</a><a href="./agents.html">Agents</a><a href="https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire">Source</a></nav></div></footer></body></html>

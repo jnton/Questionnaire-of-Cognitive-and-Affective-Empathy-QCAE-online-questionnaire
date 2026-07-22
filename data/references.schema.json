@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/references.schema.json",
+  "title": "QCAE reference registry",
+  "type": "object",
+  "required": ["id", "version", "references", "activeVariants", "integrationCandidates"],
+  "properties": {
+    "id": { "const": "qcae-references" },
+    "version": { "type": "string" },
+    "references": { "type": "array", "items": { "type": "object", "required": ["id", "title", "year", "url"] } },
+    "activeVariants": { "type": "object" },
+    "integrationCandidates": { "type": "array" }
+  }
+}

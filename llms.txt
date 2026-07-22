@@ -1,24 +1,28 @@
 # QCAE Online Questionnaire
 
-This is a privacy-first static implementation of the Questionnaire of Cognitive and Affective Empathy (QCAE).
+Privacy-first static implementation of the Questionnaire of Cognitive and Affective Empathy.
 
-## Canonical human interface
-- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/
+## Discovery
+- Human questionnaire: ./
+- Agent/developer guide: ./agents.html
+- Capability manifest: ./data/capabilities.v1.json
+- Expanded agent guidance: ./llms-full.txt
 
-## Machine-readable resources
-- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/qcae.v1.json
-- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/qcae.schema.json
-- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/results.schema.json
-- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/ui.json
+## Machine-readable contracts
+- Instrument: ./data/qcae.v1.json
+- Compact instrument: ./data/qcae.v1.min.json
+- References: ./data/references.v1.json
+- Input schema: ./data/responses.schema.json
+- Output schema: ./data/results.schema.json
+- Programmatic API: ./src/qcae-api.js
+- Local CLI: ./bin/qcae-score.mjs
 
-## Scoring
+## Invariants
 - Responses are integers 1–4 in ascending agreement order.
-- Items 1, 2, 17, and 29 are reverse-scored in the original 31-item form.
-- The Portuguese validated variant excludes item 17.
+- Original reverse-scored items: 1, 2, 17, 29.
+- Portuguese validated variant excludes item 17.
 - Raw scores are not diagnoses or normative classifications.
-
-## Privacy
-The app has no backend, analytics, cookies, accounts, or remote dependencies. Responses are processed only in the browser.
+- Never put participant responses in URLs or transmit them without explicit informed consent.
 
 ## Rights
-Application code is AGPL-3.0-only. Questionnaire wording is copyrighted content and is not relicensed by the software licence. See CONTENT-LICENSE.md.
+Code is AGPL-3.0-only. Questionnaire wording, translations, and participant data have separate rights. Read ./rights.html and ./data/references.v1.json before redistribution or model training.

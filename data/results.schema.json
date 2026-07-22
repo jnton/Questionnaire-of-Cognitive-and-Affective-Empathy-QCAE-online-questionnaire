@@ -5,8 +5,11 @@
   "type": "object",
   "required": [
     "instrument",
+    "instrumentVersion",
+    "scoreModel",
     "locale",
     "completedAt",
+    "provenance",
     "scores",
     "responses"
   ],
@@ -25,7 +28,39 @@
       "type": "object"
     },
     "responses": {
-      "type": "array"
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "itemId",
+          "response",
+          "scoredValue",
+          "reverseScored",
+          "subscale",
+          "text"
+        ]
+      }
+    },
+    "instrumentVersion": {
+      "type": "string"
+    },
+    "scoreModel": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "variantStatus",
+        "referenceIds",
+        "implementation",
+        "implementationVersion"
+      ]
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

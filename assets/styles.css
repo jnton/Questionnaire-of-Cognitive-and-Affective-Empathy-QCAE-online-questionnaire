@@ -120,3 +120,35 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
   main.container { width: 100%; padding: 0; }
   .result-card, .table-scroll { box-shadow: none; border-color: #999; }
 }
+
+/* Human-readable project pages */
+.top-nav { display: flex; align-items: center; gap: clamp(.65rem, 2vw, 1.25rem); }
+.top-nav a { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 700; }
+.top-nav a:hover { color: var(--text); text-decoration: underline; }
+.document { max-width: 820px; }
+.document-header { margin-bottom: 2.5rem; }
+.document-header h1 { max-width: 18ch; }
+.document section { margin-block: 2.2rem; }
+.document h2 { font-size: clamp(1.35rem, 3vw, 1.8rem); margin: 0 0 .75rem; letter-spacing: -.02em; }
+.document h3 { font-size: 1.12rem; margin: 0 0 .45rem; }
+.document p, .document li { max-width: 72ch; }
+.document ul { padding-left: 1.35rem; }
+.document li + li { margin-top: .45rem; }
+.document pre { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1rem; box-shadow: var(--shadow); }
+.document code { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: .9em; }
+.endpoint-list { display: grid; gap: .65rem; }
+.endpoint-list p { margin: 0; padding: .8rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+.reference-list { list-style: none; padding: 0 !important; display: grid; gap: .9rem; }
+.reference-list li { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+.reference-list p { margin: 0; }
+.reference-list .note, .note { color: var(--muted); margin-top: .55rem; font-size: .92rem; }
+.candidate-grid { display: grid; gap: 1rem; }
+.candidate-card { border-top: 1px solid var(--border); padding-top: 1.2rem; }
+.status-badge { display: inline-block; border: 1px solid var(--border); background: var(--surface-muted); border-radius: 999px; padding: .25rem .65rem; color: var(--muted); font-size: .78rem; font-weight: 750; }
+.source-list { margin: .65rem 0 1rem; padding-left: 1.25rem; }
+.resource-links { line-height: 1.9; }
+@media (max-width: 860px) {
+  .site-header { flex-wrap: wrap; }
+  .top-nav { order: 3; width: 100%; overflow-x: auto; padding-top: .2rem; }
+  .language-control { margin-left: auto; }
+}

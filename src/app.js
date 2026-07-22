@@ -1,8 +1,10 @@
 import { activeItemIds, scoreQcae } from "./scoring.js";
+import { scoreResponseDocument } from "./qcae-api.js";
 
 const state = {
   instrument: null,
   uiAll: null,
+  references: null,
   locale: "en",
   screen: "intro",
   index: 0,
@@ -17,18 +19,20 @@ const els = {
   status: document.querySelector("#status")
 };
 
-const supportedLocales = ["en", "sr-Latn", "fr", "pt-PT", "de"];
+function supportedLocales() {
+  return Object.keys(state.instrument?.variants ?? {});
+}
 
 function preferredLocale() {
   const params = new URLSearchParams(location.search);
   const requested = params.get("lang");
-  if (supportedLocales.includes(requested)) return requested;
+  if (supportedLocales().includes(requested)) return requested;
   const candidates = navigator.languages ?? [navigator.language];
   for (const candidate of candidates) {
     if (candidate.toLowerCase().startsWith("sr")) return "sr-Latn";
     if (candidate.toLowerCase().startsWith("pt")) return "pt-PT";
     const short = candidate.split("-")[0];
-    if (supportedLocales.includes(short)) return short;
+    if (supportedLocales().includes(short)) return short;
   }
   return "en";
 }
@@ -48,7 +52,7 @@ function setDocumentLanguage() {
 
 function setLanguageOptions() {
   els.language.replaceChildren();
-  for (const locale of supportedLocales) {
+  for (const locale of supportedLocales()) {
     const option = document.createElement("option");
     option.value = locale;
     option.textContent = state.uiAll[locale].languageName;
@@ -76,7 +80,7 @@ function h(tag, attrs = {}, ...children) {
 
 function variantNotice() {
   const variant = state.instrument.variants[state.locale];
-  if (state.locale === "pt-PT") return t("portugueseWarning");
+  if (variant.noticeKey) return t(variant.noticeKey);
   if (variant.status.includes("provisional")) return t("provisionalWarning");
   return "";
 }
@@ -84,7 +88,7 @@ function variantNotice() {
 function renderIntro() {
   const notice = variantNotice();
   const consent = h("input", { type: "checkbox", id: "consent" });
-  const start = h("button", { class: "button button-primary", type: "button", disabled: true, onClick: () => {
+  const start = h("button", { id: "start-questionnaire", class: "button button-primary", type: "button", disabled: true, onClick: () => {
     state.screen = "question";
     state.index = 0;
     render();
@@ -121,18 +125,26 @@ function infoCard(icon, title, body) {
 }
 
 function sourceDetails() {
-  const details = h("details", { class: "details" },
+  const variant = state.instrument.variants[state.locale];
+  const referenceById = new Map(state.references.references.map((reference) => [reference.id, reference]));
+  const sourceItems = (variant.sources ?? ["reniers-2011"]).map((id) => referenceById.get(id)).filter(Boolean);
+  const details = h("details", { class: "details", id: "sources-methodology" },
     h("summary", {}, t("source")),
     h("p", {}, t("method")),
-    h("p", {},
-      h("a", { href: state.instrument.originalPublication.url, rel: "external noopener" }, state.instrument.originalPublication.citation)
-    ),
-    h("p", {},
-      h("a", { href: "./data/qcae.v1.json" }, "Machine-readable instrument JSON"),
+    h("p", {}, t("variantSourcesIntro")),
+    h("ul", { class: "source-list" }, sourceItems.map((reference) =>
+      h("li", {}, h("a", { href: reference.url, rel: "external noopener" }, `${reference.title} (${reference.year})`))
+    )),
+    h("p", { class: "resource-links" },
+      h("a", { href: "./references.html" }, t("referencesLabel")),
       " · ",
-      h("a", { href: "./CONTENT-LICENSE.md" }, "Content rights"),
+      h("a", { href: "./data/qcae.v1.json", type: "application/json" }, "Instrument JSON"),
       " · ",
-      h("a", { href: "./PRIVACY.md" }, "Privacy")
+      h("a", { href: "./agents.html" }, t("agentsLabel")),
+      " · ",
+      h("a", { href: "./rights.html" }, t("rightsLabel")),
+      " · ",
+      h("a", { href: "./privacy.html" }, t("privacyLabel"))
     )
   );
   return details;
@@ -147,7 +159,7 @@ function renderQuestion() {
   const items = activeItems();
   const item = items[state.index];
   const current = state.responses.get(item.id);
-  const form = h("form", { class: "question-card" });
+  const form = h("form", { id: "qcae-question-form", class: "question-card", "data-qcae-item-id": item.id, "data-qcae-locale": state.locale });
   const fieldset = h("fieldset", {});
   fieldset.append(
     h("legend", {},
@@ -159,7 +171,7 @@ function renderQuestion() {
   const options = h("div", { class: "response-list" });
   labels.forEach((label, idx) => {
     const value = idx + 1;
-    const input = h("input", { type: "radio", name: "response", id: `response-${value}`, value, required: true });
+    const input = h("input", { type: "radio", name: "response", id: `response-${value}`, value, required: true, "data-qcae-response": value });
     input.checked = current === value;
     options.append(h("label", { class: "response-option", for: `response-${value}` },
       input,
@@ -169,12 +181,12 @@ function renderQuestion() {
   });
   fieldset.append(options);
   const error = h("p", { class: "form-error", role: "alert", hidden: true }, t("required"));
-  const back = h("button", { type: "button", class: "button button-secondary", onClick: () => {
+  const back = h("button", { id: "previous-question", type: "button", class: "button button-secondary", onClick: () => {
     if (state.index === 0) state.screen = "intro";
     else state.index -= 1;
     render();
   }}, t("back"));
-  const next = h("button", { type: "submit", class: "button button-primary" }, state.index === items.length - 1 ? t("finish") : t("continue"));
+  const next = h("button", { id: "next-question", type: "submit", class: "button button-primary" }, state.index === items.length - 1 ? t("finish") : t("continue"));
   form.append(fieldset, error, h("div", { class: "actions actions-between" }, back, next));
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -218,26 +230,13 @@ function scoreRow(label, value, range, kind) {
 }
 
 function resultExport() {
-  const itemById = new Map(state.instrument.items.map((item) => [item.id, item]));
-  return {
-    $schema: "./data/results.schema.json",
+  return scoreResponseDocument(state.instrument, {
     instrument: state.instrument.id,
     instrumentVersion: state.instrument.version,
-    scoreModel: state.result.scoreModel,
     locale: state.locale,
     completedAt: state.completedAt,
-    privacy: "Generated locally in the user's browser; not transmitted by the application.",
-    scores: {
-      subscales: state.result.subscales,
-      domains: state.result.domains,
-      total: state.result.total,
-      ranges: state.result.ranges
-    },
-    responses: state.result.items.map((entry) => ({
-      ...entry,
-      text: itemText(itemById.get(entry.itemId))
-    }))
-  };
+    responses: state.responses
+  }, { completedAt: state.completedAt });
 }
 
 function download(name, type, text) {
@@ -293,7 +292,7 @@ function renderResults() {
   }}, t("copy"));
 
   els.app.replaceChildren(
-    h("section", { class: "results-header" },
+    h("section", { class: "results-header", id: "qcae-results", "data-qcae-score-model": r.scoreModel },
       h("p", { class: "eyebrow" }, "QCAE"),
       h("h1", {}, t("resultsTitle")),
       h("p", { class: "lead" }, t("resultsNote"))
@@ -349,13 +348,15 @@ function render() {
 
 async function init() {
   try {
-    const [instrumentResponse, uiResponse] = await Promise.all([
+    const [instrumentResponse, uiResponse, referencesResponse] = await Promise.all([
       fetch("./data/qcae.v1.json", { cache: "no-store" }),
-      fetch("./data/ui.json", { cache: "no-store" })
+      fetch("./data/ui.json", { cache: "no-store" }),
+      fetch("./data/references.v1.json", { cache: "no-store" })
     ]);
-    if (!instrumentResponse.ok || !uiResponse.ok) throw new Error("Failed to load data");
+    if (!instrumentResponse.ok || !uiResponse.ok || !referencesResponse.ok) throw new Error("Failed to load data");
     state.instrument = await instrumentResponse.json();
     state.uiAll = await uiResponse.json();
+    state.references = await referencesResponse.json();
     state.locale = preferredLocale();
     els.language.addEventListener("change", () => {
       state.locale = els.language.value;
@@ -370,6 +371,14 @@ async function init() {
       render();
     });
     els.status.remove();
+    globalThis.QCAE_APP = Object.freeze({
+      version: state.instrument.version,
+      capabilitiesUrl: new URL("./data/capabilities.v1.json", location.href).href,
+      getLocale: () => state.locale,
+      getVariant: () => structuredClone(state.instrument.variants[state.locale]),
+      getProgress: () => ({ screen: state.screen, current: state.index + 1, answered: state.responses.size, total: activeItems().length }),
+      getResult: () => state.result ? structuredClone(resultExport()) : null
+    });
     render();
   } catch (error) {
     console.error(error);

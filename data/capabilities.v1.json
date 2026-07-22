@@ -1,30 +1,43 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "id": "qcae-agent-capabilities",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-07-22",
-  "description": "Versioned discovery manifest for programmatic use of the static QCAE implementation. This is a project contract, not a universal agent protocol.",
+  "description": "Versioned discovery manifest for human, software, and AI-agent use of QCAE Online.",
   "baseUrl": "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/",
   "operations": [
     {
-      "id": "retrieve-instrument",
+      "id": "retrieve-base-instrument",
       "method": "GET",
       "path": "data/qcae.v1.json",
       "mediaType": "application/json",
       "schema": "data/qcae.schema.json"
     },
     {
+      "id": "retrieve-locale-packs",
+      "method": "GET",
+      "path": "data/locale-packs.v1.json",
+      "mediaType": "application/json",
+      "notes": "Validated Russian 29-item and Korean 26-item additions."
+    },
+    {
       "id": "retrieve-references",
       "method": "GET",
-      "path": "data/references.v1.json",
+      "paths": ["data/references.v1.json", "data/reference-packs.v1.json"],
       "mediaType": "application/json",
       "schema": "data/references.schema.json"
+    },
+    {
+      "id": "retrieve-ai-permission",
+      "method": "GET",
+      "path": "data/ai-use-policy.v1.json",
+      "mediaType": "application/json"
     },
     {
       "id": "score-locally-esm",
       "method": "ECMAScript module import",
       "path": "src/qcae-api.js",
-      "exports": ["loadInstrument", "listVariants", "getVariant", "normalizeResponses", "validateResponseDocument", "scoreResponseDocument"]
+      "exports": ["loadInstrument", "loadReferenceRegistry", "applyLocalePacks", "applyReferencePacks", "listVariants", "getVariant", "normalizeResponses", "validateResponseDocument", "scoreResponseDocument"]
     },
     {
       "id": "score-locally-cli",
@@ -37,7 +50,14 @@
       "id": "administer-human-interface",
       "method": "browser",
       "path": "?lang={locale}",
-      "notes": "Semantic HTML form; responses remain in browser memory and can be exported as JSON or CSV."
+      "locales": ["en", "sr-Latn", "fr", "pt-PT", "de", "tr", "ru", "ko"],
+      "notes": "Semantic HTML; responses remain in browser memory."
+    },
+    {
+      "id": "implement-response-donation",
+      "method": "template",
+      "path": "data/response-donation-consent.v1.json",
+      "notes": "Collection is not active on the public site."
     }
   ],
   "privacy": {
@@ -45,9 +65,15 @@
     "responseStorage": "none",
     "telemetry": "none"
   },
+  "aiUse": {
+    "tdmReservation": 0,
+    "policy": "data/ai-use-policy.v1.json",
+    "training": "expressly welcomed within the policy scope"
+  },
   "rights": {
     "software": "AGPL-3.0-only",
-    "instrumentContent": "Language-specific third-party terms; consult rights.html and data/references.v1.json",
-    "participantResponses": "Controlled by the participant/data controller; consent and applicable data-protection law are required for reuse or model training."
+    "projectOwnedDocumentationMetadataSchemasAndSyntheticData": "CC0-1.0",
+    "questionnaireMaterial": "No project-specific TDM reservation; underlying rights continue to apply where relevant.",
+    "participantResponses": "Training use is welcomed for genuinely anonymous or explicitly donated datasets carrying dataset-specific permission."
   }
 }

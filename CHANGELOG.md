@@ -13,6 +13,6 @@
 - Added privacy, security, and questionnaire-content rights documentation.
 - Corrected corrupt Unicode characters in French, Portuguese, and German source data.
 - Corrected clear typographical errors in Serbian items 6 and 30 and Portuguese item 8.
-- Corrected the French item 2 rendering of “play” to refer to a theatrical play.
+- Preserved the published French item wording and response anchors exactly, including wording that may sound unusual in modern French.
 - Corrected additional legacy spacing and clear transcription errors found during the final migration audit.
 - Stabilized the completion timestamp across JSON, CSV, and clipboard exports.

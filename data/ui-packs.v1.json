@@ -1,7 +1,31 @@
 {
   "id": "qcae-ui-packs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "locales": {
+    "en": {
+      "rightsTitle": "Sources and attribution",
+      "rightsBody": "Each language version is linked to its published source and validation record. See References for details."
+    },
+    "sr-Latn": {
+      "rightsTitle": "Izvori i navođenje",
+      "rightsBody": "Svaka jezička verzija povezana je sa objavljenim izvorom i validacionim zapisom. Pogledajte reference za detalje."
+    },
+    "fr": {
+      "rightsTitle": "Sources et attribution",
+      "rightsBody": "Chaque version linguistique est reliée à sa source publiée et à son dossier de validation. Consultez les références pour plus de détails."
+    },
+    "pt-PT": {
+      "rightsTitle": "Fontes e atribuição",
+      "rightsBody": "Cada versão linguística está associada à respetiva fonte publicada e ao registo de validação. Consulte as referências para mais detalhes."
+    },
+    "de": {
+      "rightsTitle": "Quellen und Zuordnung",
+      "rightsBody": "Jede Sprachversion ist mit ihrer veröffentlichten Quelle und ihrem Validierungsnachweis verknüpft. Weitere Einzelheiten finden Sie in den Quellenangaben."
+    },
+    "tr": {
+      "rightsTitle": "Kaynaklar ve atıf",
+      "rightsBody": "Her dil sürümü yayımlanmış kaynağı ve doğrulama kaydıyla ilişkilendirilmiştir. Ayrıntılar için kaynaklara bakın."
+    },
     "ru": {
       "languageName": "Русский",
       "appTitle": "Опросник когнитивной и аффективной эмпатии",
@@ -27,7 +51,9 @@
       "peripheralResponsivity": "Общая чувствительность",
       "selectLanguage": "Язык",
       "consent": "Я понимаю, что это не диагностический тест.",
-      "variantSourcesIntro": "Публикации и источники для этой языковой версии:"
+      "variantSourcesIntro": "Публикации и источники для этой языковой версии:",
+      "rightsTitle": "Источники и атрибуция",
+      "rightsBody": "Каждая языковая версия связана с опубликованным источником и материалами по валидации. Подробности приведены в разделе источников."
     },
     "ko": {
       "languageName": "한국어",
@@ -54,7 +80,9 @@
       "peripheralResponsivity": "주변 반응성",
       "selectLanguage": "언어",
       "consent": "이 설문이 진단 검사가 아님을 이해합니다.",
-      "variantSourcesIntro": "이 언어판의 검증 및 출처 문헌:"
+      "variantSourcesIntro": "이 언어판의 검증 및 출처 문헌:",
+      "rightsTitle": "출처 및 인용",
+      "rightsBody": "각 언어판은 공개된 출처와 타당화 기록에 연결되어 있습니다. 자세한 내용은 참고문헌을 확인하세요."
     }
   }
 }

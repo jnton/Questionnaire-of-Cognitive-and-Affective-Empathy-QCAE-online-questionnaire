@@ -1,0 +1,24 @@
+# QCAE Online Questionnaire
+
+This is a privacy-first static implementation of the Questionnaire of Cognitive and Affective Empathy (QCAE).
+
+## Canonical human interface
+- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/
+
+## Machine-readable resources
+- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/qcae.v1.json
+- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/qcae.schema.json
+- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/results.schema.json
+- /Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/ui.json
+
+## Scoring
+- Responses are integers 1–4 in ascending agreement order.
+- Items 1, 2, 17, and 29 are reverse-scored in the original 31-item form.
+- The Portuguese validated variant excludes item 17.
+- Raw scores are not diagnoses or normative classifications.
+
+## Privacy
+The app has no backend, analytics, cookies, accounts, or remote dependencies. Responses are processed only in the browser.
+
+## Rights
+Application code is AGPL-3.0-only. Questionnaire wording is copyrighted content and is not relicensed by the software licence. See CONTENT-LICENSE.md.

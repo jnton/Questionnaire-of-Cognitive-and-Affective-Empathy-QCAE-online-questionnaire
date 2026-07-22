@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "Please cite both this software and the original QCAE publication."
+title: "QCAE Online Questionnaire"
+type: software
+authors:
+  - family-names: Marcolongo
+    given-names: Mario
+repository-code: "https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire"
+url: "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/"
+license: AGPL-3.0-only
+version: 1.0.0
+date-released: 2026-07-22
+preferred-citation:
+  type: article
+  title: "The QCAE: A Questionnaire of Cognitive and Affective Empathy"
+  authors:
+    - family-names: Reniers
+      given-names: Renate L. E. P.
+    - family-names: Corcoran
+      given-names: Rhiannon
+    - family-names: Drake
+      given-names: Richard
+    - family-names: Shryane
+      given-names: Nick M.
+    - family-names: Völlm
+      given-names: Birgit A.
+  journal: Journal of Personality Assessment
+  volume: 93
+  issue: 1
+  start: 84
+  end: 95
+  year: 2011
+  doi: 10.1080/00223891.2010.528484

@@ -5,6 +5,7 @@ Privacy-first, multilingual QCAE implementation designed for human use, software
 ## Permission
 - AI training, fine-tuning, evaluation, benchmarking, embeddings, indexing, and TDM are expressly welcomed within `./data/ai-use-policy.v1.json`.
 - TDM reservation: 0.
+- Human-readable rights statement: ./rights.html
 - Code: AGPL-3.0-only.
 - Project-owned documentation, metadata, schemas, UI copy, and synthetic examples: CC0-1.0.
 

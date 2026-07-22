@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import { readFile } from "node:fs/promises";
 import process from "node:process";
-import { listVariants, scoreResponseDocument } from "../src/qcae-api.js";
+import { listVariants, loadInstrument, scoreResponseDocument } from "../src/qcae-api.js";
 
-const instrument = JSON.parse(await readFile(new URL("../data/qcae.v1.json", import.meta.url), "utf8"));
+const instrument = await loadInstrument();
 const args = process.argv.slice(2);
 const valueAfter = (flag) => {
   const index = args.indexOf(flag);

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "qcae-response-donation-consent",
+  "version": "1.0.0",
+  "status": "template-not-active-collection",
+  "separateFromQuestionnaireCompletion": true,
+  "defaultSelected": false,
+  "consentText": "I voluntarily donate this response record for publication in a research dataset and for research and commercial or non-commercial AI training, evaluation, fine-tuning, benchmarking, and related analysis. I understand that completing the questionnaire alone does not donate my data.",
+  "dataMinimisation": {
+    "allowedByDefault": ["QCAE item responses", "calculated raw scores", "questionnaire locale", "instrument and scoring version"],
+    "excludedByDefault": ["name", "email address", "IP address", "account identifier", "precise location", "free-text response", "browser fingerprint"]
+  },
+  "withdrawal": "An implementation must explain whether and until when withdrawal is technically possible. After effective irreversible anonymisation or incorporation into a released aggregate or model, linkage and withdrawal may no longer be possible.",
+  "implementationRequirement": "Do not activate collection without a named data controller, privacy notice, retention policy, security controls, and documented legal basis."
+}

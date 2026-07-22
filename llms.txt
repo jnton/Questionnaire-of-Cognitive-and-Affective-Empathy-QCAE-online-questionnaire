@@ -25,10 +25,9 @@ Privacy-first, multilingual QCAE implementation designed for human use, software
 - Output schema: ./data/results.schema.json
 - Programmatic API: ./src/qcae-api.js
 - Local CLI: ./bin/qcae-score.mjs
-- Response-donation template: ./data/response-donation-consent.v1.json
 
 ## Active variants
 English 31, Serbian Latin 31, French 31, Portuguese 30, provisional German 31, Turkish 31, Russian 29, Korean 26.
 
-## Data
-The public site does not collect responses. Training datasets are welcome when genuinely anonymous or explicitly donated under a dataset-specific permission. Questionnaire completion by itself is not data donation.
+## Response boundary
+The public deployment has no response endpoint and does not receive, store, transmit, or process questionnaire responses. Browser use stays in browser memory; programmatic use stays in the calling agent or software environment.

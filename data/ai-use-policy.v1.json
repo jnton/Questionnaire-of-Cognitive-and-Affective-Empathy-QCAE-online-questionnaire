@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "id": "qcae-ai-use-policy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "effectiveDate": "2026-07-22",
   "tdmReservation": 0,
   "statement": "AI use, text and data mining, indexing, embedding, evaluation, fine-tuning, and model training are expressly welcomed.",
@@ -22,16 +22,16 @@
     "projectOwnedDocumentationMetadataSchemasAndSyntheticData": "CC0-1.0",
     "thirdPartyQuestionnaireMaterial": "The project makes no TDM reservation and imposes no additional restriction, but does not purport to grant rights it does not hold."
   },
-  "participantResponses": {
-    "currentPublicSiteCollectsResponses": false,
-    "trainingUse": "Welcome for datasets explicitly donated or released for that purpose.",
-    "requiredMarker": "A response dataset must carry a dataset-specific licence or permission record such as training-permitted.",
-    "consent": "Where consent is the legal basis, it must be a separate, active, informed opt-in; merely completing the questionnaire is not consent to donate responses.",
-    "anonymousData": "Datasets that are genuinely anonymous may be published under their dataset-specific terms."
+  "deploymentBoundary": {
+    "receivesResponses": false,
+    "storesResponses": false,
+    "transmitsResponses": false,
+    "processesResponsesServerSide": false,
+    "networkSubmissionEndpoint": null,
+    "statement": "Questionnaire administration and scoring occur locally in the browser or in the calling agent's own environment. This deployment is not a controller or processor of those locally handled response objects."
   },
   "machineReadableResources": [
     "./data/capabilities.v1.json",
-    "./data/response-donation-consent.v1.json",
     "./rights.html"
   ]
 }

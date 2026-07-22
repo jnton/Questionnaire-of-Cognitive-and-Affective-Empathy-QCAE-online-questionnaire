@@ -42,7 +42,6 @@ node bin/qcae-score.mjs examples/responses.en.synthetic.json
 - `data/locale-packs.v1.json` — validated Russian and Korean item packs.
 - `data/references.v1.json` and `data/reference-packs.v1.json` — publications and provenance.
 - `data/ai-use-policy.v1.json` — explicit AI/TDM permission.
-- `data/response-donation-consent.v1.json` — future optional response-donation template.
 - `src/qcae-api.js` — merged local API.
 - `llms.txt`, `llms-full.txt`, and `AGENTS.md` — agent guidance.
 
@@ -59,10 +58,12 @@ node bin/qcae-score.mjs examples/responses.en.synthetic.json
 
 The Italian and Chinese papers validate 31-item forms but do not reproduce the exact translated items in the supplied PDFs, so those interfaces remain pending exact source wording.
 
-## AI, TDM, and response data
+## AI and TDM
 
 The project sets `tdm-reservation=0`. AI training, fine-tuning, evaluation, benchmarking, embeddings, indexing, and TDM are expressly welcomed within `data/ai-use-policy.v1.json`.
 
 Code is AGPL-3.0-only. Project-owned documentation, metadata, schemas, UI copy, and synthetic examples are dedicated under CC0-1.0.
 
-The public site does not collect participant responses. Response datasets are valuable for training and may be released when genuinely anonymous or actively donated under dataset-specific terms. The repository includes a consent template but no active collection endpoint.
+## Response boundary
+
+The public deployment does not receive, store, transmit, or process questionnaire responses. Browser administration and scoring occur locally; API and CLI use occur inside the calling software or agent environment.

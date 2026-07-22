@@ -1,0 +1,15 @@
+/* Keep the public questionnaire focused on purpose and privacy.
+   Source and attribution information remains available on the References and Rights pages. */
+#app .info-grid .info-card:nth-child(3) {
+  display: none;
+}
+
+#app .info-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 720px) {
+  #app .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

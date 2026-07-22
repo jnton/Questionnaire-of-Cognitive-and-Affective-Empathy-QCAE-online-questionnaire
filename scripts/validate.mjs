@@ -13,7 +13,7 @@ for (const [locale, values] of Object.entries(uiPacks.locales ?? {})) {
   ui[locale] = { ...baseUi.en, ...(baseUi[locale] ?? {}), ...values };
 }
 const references = await loadReferenceRegistry();
-const referenceIds = new Set(references.references.map((reference) => [reference.id, reference]));
+const referenceIds = new Set(references.references.map((reference) => reference.id));
 const locales = Object.keys(instrument.variants);
 const itemById = new Map(instrument.items.map((item) => [item.id, item]));
 

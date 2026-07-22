@@ -10,7 +10,6 @@ This repository provides a versioned, privacy-first implementation of the Questi
 - TDM reservation: `0`.
 - Code: AGPL-3.0-only.
 - Project-owned documentation, metadata, schemas, UI copy, and synthetic examples: CC0-1.0.
-- Participant-response training datasets are welcome when genuinely anonymous or actively donated under dataset-specific permission.
 
 ## Stable resources
 
@@ -22,7 +21,6 @@ This repository provides a versioned, privacy-first implementation of the Questi
 - `data/reference-packs.v1.json`: reference updates and active mappings.
 - `data/responses.schema.json`: scoring-input contract.
 - `data/results.schema.json`: scoring-output contract.
-- `data/response-donation-consent.v1.json`: future optional response-donation template; no collection is currently active.
 - `src/qcae-api.js`: browser/Node-compatible ES module.
 - `bin/qcae-score.mjs`: dependency-free command-line scorer.
 
@@ -58,9 +56,9 @@ This repository provides a versioned, privacy-first implementation of the Questi
 - Results: `#qcae-results` with `data-qcae-score-model`.
 - Read-only browser contract: `window.QCAE_APP`.
 
-## Response data
+## Response boundary
 
-The public application has no response endpoint, database, analytics, account, cookie, or telemetry. Local exports may be analysed or used for training under their dataset-specific terms. A future collection implementation should keep response donation separate from questionnaire completion, unselected by default, collect no direct identifiers by default, and disclose the intended research and AI-training uses.
+The public application has no response endpoint, backend, database, analytics, account, cookie, or telemetry. It does not receive, store, transmit, or process questionnaire responses. Browser responses remain in browser memory. API and CLI response objects remain within the calling agent or software environment.
 
 ## Maintenance invariants
 

@@ -33,6 +33,14 @@ test("Portuguese validated 30-item ranges exclude item 17", () => {
   assert.deepEqual(ranges.total, { min: 30, max: 120 });
 });
 
+
+test("Turkish validated 31-item ranges use the original item set", () => {
+  const ranges = calculateRanges(instrument, "tr");
+  assert.deepEqual(ranges.total, { min: 31, max: 124 });
+  assert.deepEqual(ranges.cognitiveEmpathy, { min: 19, max: 76 });
+  assert.deepEqual(ranges.affectiveEmpathy, { min: 12, max: 48 });
+});
+
 test("all highest scored answers reach each maximum", () => {
   const responses = new Map();
   for (const item of instrument.items) responses.set(item.id, item.reverseScored ? 1 : 4);

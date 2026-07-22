@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "qcae-agent-capabilities",
+  "version": "1.0.0",
+  "updated": "2026-07-22",
+  "description": "Versioned discovery manifest for programmatic use of the static QCAE implementation. This is a project contract, not a universal agent protocol.",
+  "baseUrl": "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/",
+  "operations": [
+    {
+      "id": "retrieve-instrument",
+      "method": "GET",
+      "path": "data/qcae.v1.json",
+      "mediaType": "application/json",
+      "schema": "data/qcae.schema.json"
+    },
+    {
+      "id": "retrieve-references",
+      "method": "GET",
+      "path": "data/references.v1.json",
+      "mediaType": "application/json",
+      "schema": "data/references.schema.json"
+    },
+    {
+      "id": "score-locally-esm",
+      "method": "ECMAScript module import",
+      "path": "src/qcae-api.js",
+      "exports": ["loadInstrument", "listVariants", "getVariant", "normalizeResponses", "validateResponseDocument", "scoreResponseDocument"]
+    },
+    {
+      "id": "score-locally-cli",
+      "method": "CLI",
+      "path": "bin/qcae-score.mjs",
+      "inputSchema": "data/responses.schema.json",
+      "outputSchema": "data/results.schema.json"
+    },
+    {
+      "id": "administer-human-interface",
+      "method": "browser",
+      "path": "?lang={locale}",
+      "notes": "Semantic HTML form; responses remain in browser memory and can be exported as JSON or CSV."
+    }
+  ],
+  "privacy": {
+    "networkSubmissionEndpoint": null,
+    "responseStorage": "none",
+    "telemetry": "none"
+  },
+  "rights": {
+    "software": "AGPL-3.0-only",
+    "instrumentContent": "Language-specific third-party terms; consult rights.html and data/references.v1.json",
+    "participantResponses": "Controlled by the participant/data controller; consent and applicable data-protection law are required for reuse or model training."
+  }
+}

@@ -1,0 +1,45 @@
+# QCAE Online Questionnaire — full agent contract
+
+## Purpose
+This repository provides a versioned, static, privacy-first implementation of the Questionnaire of Cognitive and Affective Empathy (QCAE). It supports human browser administration and local programmatic scoring.
+
+## Stable resources
+- `data/capabilities.v1.json`: versioned discovery manifest.
+- `data/qcae.v1.json`: canonical items, variants, response anchors, scoring metadata, provenance IDs, and translation status.
+- `data/qcae.v1.min.json`: compact equivalent.
+- `data/references.v1.json`: validation papers, source records, active mappings, and blocked candidate versions.
+- `data/responses.schema.json`: input contract.
+- `data/results.schema.json`: output contract.
+- `src/qcae-api.js`: browser/Node-compatible ES module with local validation and scoring.
+- `bin/qcae-score.mjs`: dependency-free command-line scorer.
+
+## Programmatic workflow
+1. Retrieve the instrument and reference registry.
+2. Select a locale from `instrument.variants`.
+3. Present only the item IDs in that variant, preserving source wording and order.
+4. Collect one integer response from 1 to 4 for every active item.
+5. Validate and score locally with `scoreResponseDocument` or the CLI.
+6. Return the schema-conformant result without adding unsupported diagnoses, percentiles, or low/average/high labels.
+
+## Browser automation
+- Locale query parameter: `?lang={locale}`.
+- Main app marker: `[data-qcae-app="true"]`.
+- Start control: `#start-questionnaire`.
+- Current form: `#qcae-question-form` with `data-qcae-item-id` and `data-qcae-locale`.
+- Responses: radio inputs with `data-qcae-response="1"` through `"4"`.
+- Navigation: `#previous-question`, `#next-question`.
+- Results: `#qcae-results` with `data-qcae-score-model`.
+- Read-only browser contract: `window.QCAE_APP`.
+
+## Privacy rules
+The public application has no response endpoint, database, analytics, account, cookie, or telemetry. Do not create hidden submission paths or encode responses in query strings. Participant exports can be processed only under the consent, security, and legal conditions established by the relevant data controller.
+
+## Rights and training
+Technical access is intentionally broad, but the project cannot waive third-party rights. The application code is AGPL-3.0-only. The original QCAE wording and language adaptations have separate copyright/licence conditions. Model training on item text or participant responses requires a lawful basis, applicable permissions, and—in the case of participant data—informed consent and privacy safeguards. Synthetic examples are marked as synthetic and contain no participant records.
+
+## Maintenance invariants
+- Preserve reverse scoring for original items 1, 2, 17, and 29.
+- Preserve language-specific item exclusions and published wording.
+- Link every enabled language to its source or validation publications.
+- Do not enable a new translation without an exact item source, scoring reconciliation, provenance record, and rights review.
+- Run `npm test` before deployment.

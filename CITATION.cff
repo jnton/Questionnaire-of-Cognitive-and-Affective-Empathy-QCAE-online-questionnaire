@@ -8,7 +8,7 @@ authors:
 repository-code: "https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire"
 url: "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/"
 license: AGPL-3.0-only
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-07-22
 preferred-citation:
   type: article

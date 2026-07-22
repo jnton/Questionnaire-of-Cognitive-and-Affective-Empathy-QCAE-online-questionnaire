@@ -6,8 +6,14 @@
   <meta name="description" content="A privacy-first, transparent online implementation of the Questionnaire of Cognitive and Affective Empathy (QCAE).">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f7f7f4">
+  <meta name="citation_title" content="The QCAE: A Questionnaire of Cognitive and Affective Empathy">
+  <meta name="citation_doi" content="10.1080/00223891.2010.528484">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
   <link rel="canonical" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/">
+  <link rel="alternate" type="application/json" title="QCAE instrument definition" href="./data/qcae.v1.json">
+  <link rel="alternate" type="application/json" title="QCAE reference registry" href="./data/references.v1.json">
+  <link rel="alternate" type="application/json" title="QCAE agent capabilities" href="./data/capabilities.v1.json">
+  <link rel="help" href="./agents.html">
   <link rel="stylesheet" href="./assets/styles.css">
   <link rel="manifest" href="./manifest.webmanifest">
   <title>Questionnaire of Cognitive and Affective Empathy — QCAE</title>
@@ -16,12 +22,17 @@
   <a class="skip-link" href="#app">Skip to questionnaire</a>
   <header class="site-header">
     <a class="brand" href="./" aria-label="QCAE home">QCAE</a>
+    <nav class="top-nav" aria-label="Project navigation">
+      <a href="./about.html">About</a>
+      <a href="./references.html">References</a>
+      <a href="./agents.html">Agents &amp; developers</a>
+    </nav>
     <label class="language-control">
       <span class="visually-hidden">Language</span>
       <select id="language-select"></select>
     </label>
   </header>
-  <main id="app" class="container" tabindex="-1">
+  <main id="app" class="container" tabindex="-1" data-qcae-app="true">
     <p id="status" role="status">Loading questionnaire…</p>
     <noscript>This questionnaire requires JavaScript. No external scripts or trackers are used.</noscript>
   </main>
@@ -29,9 +40,11 @@
     <div class="container footer-inner">
       <p>Privacy-first: responses stay in your browser.</p>
       <nav aria-label="Project information">
-        <a href="./README.md">About</a>
-        <a href="./PRIVACY.md">Privacy</a>
-        <a href="./CONTENT-LICENSE.md">Rights</a>
+        <a href="./about.html">About</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./rights.html">Rights</a>
+        <a href="./references.html">References</a>
+        <a href="./agents.html">Agents</a>
         <a href="https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire">Source code</a>
       </nav>
     </div>

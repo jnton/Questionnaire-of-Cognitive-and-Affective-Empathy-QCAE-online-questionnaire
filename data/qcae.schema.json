@@ -33,7 +33,38 @@
       }
     },
     "variants": {
-      "type": "object"
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "items",
+          "status",
+          "scoreModel"
+        ],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 31
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "scoreModel": {
+            "type": "string"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
     },
     "subscales": {
       "type": "array",
@@ -42,6 +73,9 @@
     },
     "responseScale": {
       "type": "object"
+    },
+    "references": {
+      "type": "string"
     }
   }
 }

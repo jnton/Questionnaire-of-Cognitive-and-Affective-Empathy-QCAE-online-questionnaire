@@ -1,0 +1,362 @@
+{
+  "$schema": "./references.schema.json",
+  "id": "qcae-references",
+  "version": "1.0.0",
+  "updated": "2026-07-22",
+  "references": [
+    {
+      "id": "reniers-2011",
+      "kind": "original-development-validation",
+      "languages": [
+        "en"
+      ],
+      "title": "The QCAE: A Questionnaire of Cognitive and Affective Empathy",
+      "authors": [
+        "Renate L. E. P. Reniers",
+        "Rhiannon Corcoran",
+        "Richard Drake",
+        "Nick M. Shryane",
+        "Birgit A. Völlm"
+      ],
+      "year": 2011,
+      "journal": "Journal of Personality Assessment",
+      "volume": "93",
+      "issue": "1",
+      "pages": "84–95",
+      "doi": "10.1080/00223891.2010.528484",
+      "url": "https://doi.org/10.1080/00223891.2010.528484"
+    },
+    {
+      "id": "ivanovic-2020-osf",
+      "kind": "translation-repository-record",
+      "languages": [
+        "sr-Latn"
+      ],
+      "title": "Questionnaire of Cognitive and Affective Empathy – QCAE",
+      "authors": [
+        "Jovan Ivanović",
+        "Aleksandra Lazić",
+        "Ljiljana Lazarević",
+        "Iris Žeželj",
+        "Danka Purić"
+      ],
+      "year": 2020,
+      "repository": "OSF / REPOPSI",
+      "doi": "10.17605/OSF.IO/MEZ5N",
+      "url": "https://doi.org/10.17605/OSF.IO/MEZ5N",
+      "note": "A repository/adaptation record. No peer-reviewed Serbian validation paper was located during the 2026 review; licence metadata should be verified directly from the source record."
+    },
+    {
+      "id": "myszkowski-2017",
+      "kind": "translation-validation",
+      "languages": [
+        "fr"
+      ],
+      "title": "Is the Questionnaire of Cognitive and Affective Empathy measuring two or five dimensions? Evidence in a French sample",
+      "authors": [
+        "Nils Myszkowski",
+        "Eric Brunet-Gouet",
+        "Paul Roux",
+        "Léonore Robieux",
+        "Antoine Malézieux",
+        "Emilie Boujut",
+        "Franck Zenasni"
+      ],
+      "year": 2017,
+      "journal": "Psychiatry Research",
+      "volume": "255",
+      "pages": "292–296",
+      "doi": "10.1016/j.psychres.2017.05.047",
+      "url": "https://doi.org/10.1016/j.psychres.2017.05.047"
+    },
+    {
+      "id": "brunet-gouet-2019",
+      "kind": "clinical-validation",
+      "languages": [
+        "fr"
+      ],
+      "title": "Confirmation of a Two-Factor Solution to the Questionnaire of Cognitive and Affective Empathy in a French Population of Patients With Schizophrenia Spectrum Disorders",
+      "authors": [
+        "Eric Brunet-Gouet",
+        "Nils Myszkowski",
+        "Mickael Ehrminger",
+        "Paul Roux",
+        "et al."
+      ],
+      "year": 2019,
+      "journal": "Frontiers in Psychiatry",
+      "volume": "10",
+      "article": "751",
+      "doi": "10.3389/fpsyt.2019.00751",
+      "url": "https://doi.org/10.3389/fpsyt.2019.00751"
+    },
+    {
+      "id": "queiros-2018",
+      "kind": "translation-validation",
+      "languages": [
+        "pt-PT"
+      ],
+      "title": "Psychometric properties of the questionnaire of cognitive and affective empathy in a Portuguese sample",
+      "authors": [
+        "Andreia Queirós",
+        "Eugénia Fernandes",
+        "Renate Reniers",
+        "Ana Sampaio",
+        "Joana Coutinho",
+        "Ana Seara-Cardoso"
+      ],
+      "year": 2018,
+      "journal": "PLOS ONE",
+      "volume": "13",
+      "issue": "6",
+      "article": "e0197755",
+      "doi": "10.1371/journal.pone.0197755",
+      "url": "https://doi.org/10.1371/journal.pone.0197755",
+      "note": "The validated Portuguese scoring variant excludes original item 17."
+    },
+    {
+      "id": "lubke-2024",
+      "kind": "translation-validation",
+      "languages": [
+        "de"
+      ],
+      "title": "Psychometrische Evaluation der deutschen Version des Questionnaire of Cognitive and Affective Empathy (QCAE)",
+      "authors": [
+        "Laura Lübke",
+        "Diana Krogmann",
+        "Carsten Spitzer"
+      ],
+      "year": 2024,
+      "journal": "Psychotherapie, Psychosomatik, Medizinische Psychologie",
+      "volume": "74",
+      "issue": "11",
+      "pages": "454–459",
+      "doi": "10.1055/a-2366-9995",
+      "url": "https://doi.org/10.1055/a-2366-9995",
+      "note": "The current site wording has not yet been reconciled against this validated 2024 German form."
+    },
+    {
+      "id": "bukowski-2019-osf",
+      "kind": "research-material-source",
+      "languages": [
+        "de"
+      ],
+      "title": "German QCAE research materials associated with self–other distinction research",
+      "authors": [
+        "Henryk Bukowski",
+        "Claus Lamm",
+        "Giorgia Silani"
+      ],
+      "year": 2019,
+      "repository": "OSF",
+      "doi": "10.17605/OSF.IO/HFNK5",
+      "url": "https://doi.org/10.17605/OSF.IO/HFNK5",
+      "note": "Source of the legacy repository wording; content licence and equivalence to the validated 2024 form remain unresolved."
+    },
+    {
+      "id": "gica-2021",
+      "kind": "translation-validation",
+      "languages": [
+        "tr"
+      ],
+      "title": "Psychometric Properties of Questionnaire of Cognitive and Affective Empathy (QCAE): Reliability and Factor Analysis Study in Turkish Sample",
+      "authors": [
+        "Şakir Gıca",
+        "Ahsen Büyükavşar",
+        "M. Sinan İyisoy",
+        "Hüseyin Güleç"
+      ],
+      "year": 2021,
+      "journal": "Archives of Neuropsychiatry",
+      "volume": "58",
+      "issue": "3",
+      "pages": "228–233",
+      "doi": "10.29399/npa.27248",
+      "url": "https://doi.org/10.29399/npa.27248",
+      "license": "CC BY-NC-SA 3.0"
+    },
+    {
+      "id": "gica-2024-correction",
+      "kind": "correction",
+      "languages": [
+        "tr"
+      ],
+      "title": "Correction: Psychometric Properties of Questionnaire of Cognitive and Affective Empathy (QCAE): Reliability and Factor Analysis Study in Turkish Sample",
+      "authors": [
+        "Şakir Gıca",
+        "Ahsen Büyükavşar",
+        "M. Sinan İyisoy",
+        "Hüseyin Güleç"
+      ],
+      "year": 2024,
+      "journal": "Archives of Neuropsychiatry",
+      "volume": "61",
+      "issue": "1",
+      "pages": "97–98",
+      "doi": "10.29399/npa.28743",
+      "url": "https://doi.org/10.29399/npa.28743"
+    },
+    {
+      "id": "di-girolamo-2019",
+      "kind": "translation-validation",
+      "languages": [
+        "it"
+      ],
+      "title": "The Questionnaire of Cognitive and Affective Empathy: A Comparison Between Paper-and-Pencil Versus Online Formats in Italian Samples",
+      "authors": [
+        "Michele Di Girolamo",
+        "et al."
+      ],
+      "year": 2019,
+      "journal": "Journal of Personality Assessment",
+      "volume": "101",
+      "issue": "2",
+      "doi": "10.1080/00223891.2017.1389745",
+      "url": "https://doi.org/10.1080/00223891.2017.1389745"
+    },
+    {
+      "id": "liang-2019",
+      "kind": "translation-validation",
+      "languages": [
+        "zh-CN"
+      ],
+      "title": "Validation and extension of the Questionnaire of Cognitive and Affective Empathy in the Chinese setting",
+      "authors": [
+        "Yun-Si Liang",
+        "Han-Xue Yang",
+        "Yan-Tao Ma",
+        "Simon S. Y. Lui",
+        "Eric F. C. Cheung",
+        "Yi Wang",
+        "Raymond C. K. Chan"
+      ],
+      "year": 2019,
+      "journal": "PsyCh Journal",
+      "volume": "8",
+      "issue": "4",
+      "pages": "439–448",
+      "doi": "10.1002/pchj.281",
+      "url": "https://doi.org/10.1002/pchj.281"
+    },
+    {
+      "id": "okatova-2021",
+      "kind": "translation-validation",
+      "languages": [
+        "ru"
+      ],
+      "title": "Approbation of the Russian Version of the Questionnaire of Cognitive and Affective Empathy",
+      "authors": [
+        "Maria Okatova"
+      ],
+      "year": 2021,
+      "journal": "Psychology. Journal of Higher School of Economics",
+      "volume": "18",
+      "issue": "4",
+      "pages": "685–699",
+      "doi": "10.17323/1813-8918-2021-4-685-699",
+      "url": "https://doi.org/10.17323/1813-8918-2021-4-685-699",
+      "note": "Published 29-item variant excluding original items 1 and 17. Redistribution terms for the item wording have not been confirmed."
+    },
+    {
+      "id": "kim-2018",
+      "kind": "thesis-validation",
+      "languages": [
+        "ko"
+      ],
+      "title": "The validation of the Korean version of Questionnaire of Cognitive and Affective Empathy (K-QCAE)",
+      "authors": [
+        "Minju Kim"
+      ],
+      "year": 2018,
+      "publisher": "Sookmyung Women’s University Graduate School",
+      "url": "https://dl.nanet.go.kr/detail/KDMT1201842578",
+      "note": "Master’s thesis reporting a reduced 26-item version; exact reusable wording and permissions are still needed."
+    }
+  ],
+  "activeVariants": {
+    "en": {
+      "referenceIds": [
+        "reniers-2011"
+      ]
+    },
+    "sr-Latn": {
+      "referenceIds": [
+        "ivanovic-2020-osf"
+      ]
+    },
+    "fr": {
+      "referenceIds": [
+        "myszkowski-2017",
+        "brunet-gouet-2019"
+      ]
+    },
+    "pt-PT": {
+      "referenceIds": [
+        "queiros-2018"
+      ]
+    },
+    "de": {
+      "referenceIds": [
+        "lubke-2024",
+        "bukowski-2019-osf"
+      ],
+      "status": "provisional-wording"
+    },
+    "tr": {
+      "referenceIds": [
+        "gica-2021",
+        "gica-2024-correction"
+      ]
+    }
+  },
+  "integrationCandidates": [
+    {
+      "locale": "it",
+      "language": "Italian",
+      "referenceIds": [
+        "di-girolamo-2019"
+      ],
+      "status": "blocked-needs-validated-items-and-rights"
+    },
+    {
+      "locale": "zh-CN",
+      "language": "Chinese (Simplified)",
+      "referenceIds": [
+        "liang-2019"
+      ],
+      "status": "blocked-needs-validated-items-and-rights"
+    },
+    {
+      "locale": "ru",
+      "language": "Russian",
+      "referenceIds": [
+        "okatova-2021"
+      ],
+      "status": "blocked-needs-rights-confirmation"
+    },
+    {
+      "locale": "ko",
+      "language": "Korean",
+      "referenceIds": [
+        "kim-2018"
+      ],
+      "status": "blocked-needs-thesis-appendix-and-rights"
+    },
+    {
+      "locale": "de",
+      "language": "German validated 2024 wording",
+      "referenceIds": [
+        "lubke-2024"
+      ],
+      "status": "blocked-needs-validated-item-file-or-supplement"
+    },
+    {
+      "locale": "sr-Latn",
+      "language": "Serbian Latin",
+      "referenceIds": [
+        "ivanovic-2020-osf"
+      ],
+      "status": "active-but-needs-direct-metadata-and-license-verification"
+    }
+  ]
+}

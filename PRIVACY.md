@@ -1,11 +1,13 @@
 # Privacy
 
-This application is intentionally static and has no backend.
+The public application is static and has no participant-response backend.
 
-- Responses are held only in the current browser tab's memory.
-- Responses are not sent to GitHub, the repository owner, or any third party.
-- The application contains no analytics, advertising, cookies, account system, remote fonts, or CDN scripts.
-- JSON and CSV exports are created locally by the browser.
-- Closing or reloading the page clears the current responses unless the user has already downloaded an export.
+- Responses exist only in the current browser tab's memory.
+- Responses are not transmitted, logged, stored in local storage, placed in URLs, or sent to the repository owner.
+- The application contains no analytics, advertising, cookies, accounts, tracking pixels, remote fonts, or third-party JavaScript.
+- JSON, CSV, clipboard, and print/PDF outputs are generated locally.
+- Reloading or closing the page clears current responses unless the user saved an export.
 
-GitHub Pages necessarily receives ordinary web-server request metadata when serving files. The application itself does not add tracking or response data to those requests.
+GitHub Pages receives ordinary request metadata while serving public files. The application does not add response values or scores to those requests.
+
+The human-readable version is `privacy.html`.

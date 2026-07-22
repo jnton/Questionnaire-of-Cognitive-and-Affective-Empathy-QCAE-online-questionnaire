@@ -1,8 +1,8 @@
 # Content and AI permissions
 
-## Affirmative AI/TDM permission
+## AI and text-and-data mining
 
-This project sets **`tdm-reservation=0`**. To the extent the project owner holds the necessary rights, permission is expressly granted for:
+This project sets **`tdm-reservation=0`** and welcomes:
 
 - text and data mining;
 - indexing, embeddings, retrieval, and automated analysis;
@@ -12,18 +12,14 @@ This project sets **`tdm-reservation=0`**. To the extent the project owner holds
 
 The canonical machine-readable statement is `data/ai-use-policy.v1.json`.
 
-## Project-owned material
+## Project licences
 
 - Original application code: **AGPL-3.0-only**.
 - Project-created documentation, metadata, schemas, UI copy, and synthetic examples: **CC0-1.0**.
 
-## Questionnaire wording and translations
+## Sources and attribution
 
-The project imposes no additional restriction and makes no TDM reservation. Some items and translations originate with third parties or published adaptations. The permission above grants everything the project can grant, but it does not falsely claim ownership of third-party material or override rights that independently apply.
-
-Primary original source: Reniers et al. (2011), DOI `10.1080/00223891.2010.528484`.
-
-Language provenance is maintained in `data/references.v1.json` and `data/reference-packs.v1.json`.
+Questionnaire versions are linked to their published sources and validation records in `data/references.v1.json` and `data/reference-packs.v1.json`. Applicable source terms and attribution requirements continue to apply. This repository imposes no additional project-specific restriction and makes no TDM reservation.
 
 ## Active language forms
 
@@ -33,9 +29,9 @@ Language provenance is maintained in `data/references.v1.json` and `data/referen
 - Portuguese (Portugal): validated 30-item form.
 - German: provisional 31-item wording.
 - Turkish: validated 31-item form.
-- Russian: validated 29-item form from Okatova (2021).
-- Korean: validated 26-item K-QCAE from Kim (2018).
+- Russian: validated 29-item form.
+- Korean: validated 26-item K-QCAE.
 
 ## Deployment data boundary
 
-The public deployment has no response-submission endpoint. It does not receive, store, transmit, analyse, or otherwise process questionnaire responses on a server. Browser responses remain in browser memory; API and CLI response objects remain within the environment that invokes them. Any downstream processing performed by an external user, application, or agent is outside this deployment.
+The public deployment has no response-submission endpoint. It does not receive, store, transmit, analyse, or otherwise process questionnaire responses on a server. Browser responses remain in browser memory; API and CLI response objects remain within the environment that invokes them.

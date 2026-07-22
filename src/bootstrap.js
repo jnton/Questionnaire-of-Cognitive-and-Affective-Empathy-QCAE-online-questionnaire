@@ -32,9 +32,9 @@ async function mergedUi() {
     json("data/ui.json"),
     json("data/ui-packs.v1.json")
   ]).then(([ui, packs]) => {
-    const merged = { ...ui };
+    const merged = structuredClone(ui);
     for (const [locale, values] of Object.entries(packs.locales ?? {})) {
-      merged[locale] = { ...ui.en, ...values };
+      merged[locale] = { ...ui.en, ...(ui[locale] ?? {}), ...values };
     }
     return merged;
   });

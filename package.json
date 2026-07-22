@@ -1,6 +1,6 @@
 {
   "name": "qcae-online-questionnaire",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "description": "Privacy-first static implementation of the Questionnaire of Cognitive and Affective Empathy.",
@@ -17,7 +17,9 @@
     "./api": "./src/qcae-api.js",
     "./scoring": "./src/scoring.js",
     "./instrument": "./data/qcae.v1.json",
-    "./references": "./data/references.v1.json"
+    "./locale-packs": "./data/locale-packs.v1.json",
+    "./references": "./data/references.v1.json",
+    "./ai-policy": "./data/ai-use-policy.v1.json"
   },
   "bin": {
     "qcae-score": "./bin/qcae-score.mjs"

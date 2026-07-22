@@ -1,0 +1,25 @@
+{
+  "id": "qcae-reference-packs",
+  "version": "1.0.0",
+  "referenceUpdates": {
+    "okatova-2021": {
+      "note": "Published 29-item Russian adaptation. The full questionnaire and scoring key appear in Appendix 1; original QCAE items 1 and 17 are excluded."
+    },
+    "kim-2018": {
+      "note": "Master’s thesis validating a 26-item Korean K-QCAE. The supplied Appendix 3 contains the questionnaire; original QCAE items 1, 14, 17, 18, and 28 are excluded."
+    },
+    "di-girolamo-2019": {
+      "authors": ["Marzia Di Girolamo", "Luciano Giromini", "Christina L. Winters", "Colinda M. B. Serie", "Corine de Ruiter"],
+      "pages": "159–170",
+      "note": "The paper validates a 31-item Italian translation but does not reproduce the exact Italian item wording."
+    },
+    "liang-2019": {
+      "note": "The paper confirms a translated and back-translated 31-item Chinese form, but the exact Chinese item wording is not reproduced in the article PDF."
+    }
+  },
+  "activeVariants": {
+    "ru": {"referenceIds": ["okatova-2021"]},
+    "ko": {"referenceIds": ["kim-2018"]}
+  },
+  "removeCandidateLocales": ["ru", "ko"]
+}

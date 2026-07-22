@@ -1,37 +1,20 @@
 # QCAE Online Questionnaire
 
-A privacy-first, multilingual, static implementation of the **Questionnaire of Cognitive and Affective Empathy (QCAE)**.
+A privacy-first, multilingual, static implementation of the **Questionnaire of Cognitive and Affective Empathy (QCAE)** for humans, research software, and AI agents.
 
 ## Product
 
 - Semantic, keyboard-accessible, one-question-at-a-time browser administration.
-- No backend, analytics, cookies, accounts, remote fonts, CDN scripts, or participant-response storage.
-- English, Serbian Latin, French, Portuguese (Portugal), provisional German, and validated Turkish interfaces.
-- Original 31-item scoring plus language-specific validated variants.
+- No backend, analytics, cookies, accounts, CDN scripts, or participant-response storage.
+- English, Serbian Latin, French, Portuguese (Portugal), provisional German, Turkish, Russian, and Korean interfaces.
+- Validated 31-, 30-, 29-, and 26-item scoring variants.
 - Local JSON/CSV export, clipboard copy, and print/save-to-PDF.
-- Raw scores only: no diagnosis or uncited normative classification.
+- Dependency-free JavaScript API and CLI.
 
-Human-readable project pages:
-
-- `about.html`
-- `privacy.html`
-- `rights.html`
-- `references.html`
-- `agents.html`
-
-## Run locally
+## Run and test
 
 ```sh
 python3 -m http.server 8000
-```
-
-Open `http://localhost:8000`.
-
-## Test
-
-Requires Node.js 20 or newer.
-
-```sh
 npm test
 ```
 
@@ -40,14 +23,12 @@ npm test
 ```js
 import { loadInstrument, scoreResponseDocument } from "./src/qcae-api.js";
 
-const instrument = await loadInstrument();
+const instrument = await loadInstrument(); // automatically merges locale packs
 const result = scoreResponseDocument(instrument, {
-  locale: "en",
-  responses: { "1": 2, "2": 3 /* all active items */ }
+  locale: "ko",
+  responses: { "2": 2, "3": 3 /* all active items */ }
 });
 ```
-
-Command line:
 
 ```sh
 node bin/qcae-score.mjs --list-variants
@@ -56,33 +37,32 @@ node bin/qcae-score.mjs examples/responses.en.synthetic.json
 
 ## Machine-readable resources
 
-- `data/capabilities.v1.json` — versioned agent/developer discovery contract.
-- `data/qcae.v1.json` and `.min.json` — canonical instrument and translations.
-- `data/references.v1.json` — papers, provenance, and integration candidates.
-- `data/qcae.schema.json` — instrument schema.
-- `data/responses.schema.json` — scoring-input schema.
-- `data/results.schema.json` — scoring-output schema.
-- `src/qcae-api.js` — dependency-free local API.
+- `data/capabilities.v1.json` — operations and discovery.
+- `data/qcae.v1.json` — base instrument.
+- `data/locale-packs.v1.json` — validated Russian and Korean item packs.
+- `data/references.v1.json` and `data/reference-packs.v1.json` — publications and provenance.
+- `data/ai-use-policy.v1.json` — explicit AI/TDM permission.
+- `data/response-donation-consent.v1.json` — future optional response-donation template.
+- `src/qcae-api.js` — merged local API.
 - `llms.txt`, `llms-full.txt`, and `AGENTS.md` — agent guidance.
 
-## Enabled versions and papers
+## Enabled versions
 
-Every enabled language maps to source IDs in `data/qcae.v1.json`; complete citations and DOI links are maintained in `data/references.v1.json` and rendered in `references.html`.
+- Original English: 31 items.
+- Serbian Latin: 31 items.
+- French: 31 items.
+- Portuguese (Portugal): validated 30-item version excluding original item 17.
+- German: 31-item provisional wording pending reconciliation with the 2024 validation.
+- Turkish: validated 31-item version.
+- Russian: validated 29-item version excluding original items 1 and 17.
+- Korean K-QCAE: validated 26-item version excluding original items 1, 14, 17, 18, and 28.
 
-The Turkish form is sourced from Gıca et al. (2021), DOI `10.29399/npa.27248`, together with its 2024 correction, DOI `10.29399/npa.28743`. The current German wording remains provisional until reconciled against the validated 2024 German publication.
+The Italian and Chinese papers validate 31-item forms but do not reproduce the exact translated items in the supplied PDFs, so those interfaces remain pending exact source wording.
 
-## Additional versions
+## AI, TDM, and response data
 
-Italian, Chinese, Russian, Korean, and validated German sources have been identified. They remain disabled where exact validated items or redistribution permissions are missing. Do not machine-translate questionnaire items as a substitute for a validated adaptation.
+The project sets `tdm-reservation=0`. AI training, fine-tuning, evaluation, benchmarking, embeddings, indexing, and TDM are expressly welcomed within `data/ai-use-policy.v1.json`.
 
-## Deployment
+Code is AGPL-3.0-only. Project-owned documentation, metadata, schemas, UI copy, and synthetic examples are dedicated under CC0-1.0.
 
-GitHub Pages is appropriate because the application deliberately has no response backend. GitHub Actions runs validation and tests before deploying `main`.
-
-## Rights
-
-**Code:** AGPL-3.0-only.
-
-**Questionnaire text and translations:** language-specific third-party rights; not relicensed by AGPL.
-
-**Participant responses:** controlled by the participant or data controller and not collected by this site. Training or redistribution requires appropriate consent, a lawful basis, and content permissions. See `rights.html` and `CONTENT-LICENSE.md`.
+The public site does not collect participant responses. Response datasets are valuable for training and may be released when genuinely anonymous or actively donated under dataset-specific terms. The repository includes a consent template but no active collection endpoint.

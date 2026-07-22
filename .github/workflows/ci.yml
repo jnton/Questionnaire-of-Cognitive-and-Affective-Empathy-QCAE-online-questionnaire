@@ -18,4 +18,17 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm test
+      - name: Run tests
+        run: |
+          set +e
+          npm test > test-output.txt 2>&1
+          status=$?
+          cat test-output.txt
+          exit "$status"
+      - name: Upload test output
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-output
+          path: test-output.txt
+          retention-days: 7

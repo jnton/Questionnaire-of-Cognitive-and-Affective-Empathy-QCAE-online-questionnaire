@@ -1,28 +1,34 @@
 # QCAE Online Questionnaire
 
-Privacy-first static implementation of the Questionnaire of Cognitive and Affective Empathy.
+Privacy-first, multilingual QCAE implementation designed for human use, software integration, AI agents, and text-and-data mining.
+
+## Permission
+- AI training, fine-tuning, evaluation, benchmarking, embeddings, indexing, and TDM are expressly welcomed within `./data/ai-use-policy.v1.json`.
+- TDM reservation: 0.
+- Human-readable rights statement: ./rights.html
+- Code: AGPL-3.0-only.
+- Project-owned documentation, metadata, schemas, UI copy, and synthetic examples: CC0-1.0.
 
 ## Discovery
 - Human questionnaire: ./
 - Agent/developer guide: ./agents.html
 - Capability manifest: ./data/capabilities.v1.json
+- AI-use policy: ./data/ai-use-policy.v1.json
 - Expanded agent guidance: ./llms-full.txt
 
 ## Machine-readable contracts
-- Instrument: ./data/qcae.v1.json
-- Compact instrument: ./data/qcae.v1.min.json
-- References: ./data/references.v1.json
+- Base instrument: ./data/qcae.v1.json
+- Validated locale packs: ./data/locale-packs.v1.json
+- Base references: ./data/references.v1.json
+- Reference updates: ./data/reference-packs.v1.json
 - Input schema: ./data/responses.schema.json
 - Output schema: ./data/results.schema.json
 - Programmatic API: ./src/qcae-api.js
 - Local CLI: ./bin/qcae-score.mjs
+- Response-donation template: ./data/response-donation-consent.v1.json
 
-## Invariants
-- Responses are integers 1–4 in ascending agreement order.
-- Original reverse-scored items: 1, 2, 17, 29.
-- Portuguese validated variant excludes item 17.
-- Raw scores are not diagnoses or normative classifications.
-- Never put participant responses in URLs or transmit them without explicit informed consent.
+## Active variants
+English 31, Serbian Latin 31, French 31, Portuguese 30, provisional German 31, Turkish 31, Russian 29, Korean 26.
 
-## Rights
-Code is AGPL-3.0-only. Questionnaire wording, translations, and participant data have separate rights. Read ./rights.html and ./data/references.v1.json before redistribution or model training.
+## Data
+The public site does not collect responses. Training datasets are welcome when genuinely anonymous or explicitly donated under a dataset-specific permission. Questionnaire completion by itself is not data donation.

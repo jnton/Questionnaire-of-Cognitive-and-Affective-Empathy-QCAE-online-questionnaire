@@ -8,10 +8,12 @@ const baseInstrument = await readJson("../data/qcae.v1.json");
 const compact = await readJson("../data/qcae.v1.min.json");
 const baseUi = await readJson("../data/ui.json");
 const uiPacks = await readJson("../data/ui-packs.v1.json");
-const ui = { ...baseUi };
-for (const [locale, values] of Object.entries(uiPacks.locales ?? {})) ui[locale] = { ...baseUi.en, ...values };
+const ui = structuredClone(baseUi);
+for (const [locale, values] of Object.entries(uiPacks.locales ?? {})) {
+  ui[locale] = { ...baseUi.en, ...(baseUi[locale] ?? {}), ...values };
+}
 const references = await loadReferenceRegistry();
-const referenceIds = new Set(references.references.map((reference) => reference.id));
+const referenceIds = new Set(references.references.map((reference) => [reference.id, reference]));
 const locales = Object.keys(instrument.variants);
 const itemById = new Map(instrument.items.map((item) => [item.id, item]));
 
@@ -25,6 +27,8 @@ const requiredUiKeys = Object.keys(ui.en).sort();
 for (const locale of locales) {
   assert(ui[locale], `Missing UI locale ${locale}`);
   assert.deepEqual(Object.keys(ui[locale]).sort(), requiredUiKeys, `UI key mismatch for ${locale}`);
+  assert.equal(ui[locale].rightsTitle.length > 0, true, `Missing source title for ${locale}`);
+  assert.equal(ui[locale].rightsBody.length > 0, true, `Missing source body for ${locale}`);
   const variant = instrument.variants[locale];
   assert.equal(new Set(variant.items).size, variant.items.length, `Duplicate active item in ${locale}`);
   assert(variant.sources?.length, `Missing sources for ${locale}`);

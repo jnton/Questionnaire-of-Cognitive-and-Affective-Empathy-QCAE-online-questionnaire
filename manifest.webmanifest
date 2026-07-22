@@ -1,0 +1,10 @@
+{
+  "name": "Questionnaire of Cognitive and Affective Empathy",
+  "short_name": "QCAE",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f7f4",
+  "theme_color": "#f7f7f4",
+  "lang": "en",
+  "description": "Privacy-first QCAE questionnaire and scoring."
+}

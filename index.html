@@ -1,17 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/survey-jquery@1.9.104/survey.jquery.min.js"></script>
-    <script src="https://unpkg.com/jspdf@2.3.0/dist/jspdf.umd.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/survey-jquery@1.9.104/defaultV2.min.css" />
-    <link rel="stylesheet" href ="./index.css" />
-  </head>
-  <body>
-    <div id="pdf-preview"></div>
-    <div id="surveyElement"></div>
-    <script src="./json.js"></script>
-    <script src="./theme.js"></script>
-    <script src="./index.js"></script>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A privacy-first, transparent online implementation of the Questionnaire of Cognitive and Affective Empathy (QCAE).">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#f7f7f4">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+  <link rel="canonical" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <title>Questionnaire of Cognitive and Affective Empathy — QCAE</title>
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to questionnaire</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="QCAE home">QCAE</a>
+    <label class="language-control">
+      <span class="visually-hidden">Language</span>
+      <select id="language-select"></select>
+    </label>
+  </header>
+  <main id="app" class="container" tabindex="-1">
+    <p id="status" role="status">Loading questionnaire…</p>
+    <noscript>This questionnaire requires JavaScript. No external scripts or trackers are used.</noscript>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Privacy-first: responses stay in your browser.</p>
+      <nav aria-label="Project information">
+        <a href="./README.md">About</a>
+        <a href="./PRIVACY.md">Privacy</a>
+        <a href="./CONTENT-LICENSE.md">Rights</a>
+        <a href="https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire">Source code</a>
+      </nav>
+    </div>
+  </footer>
+  <script type="module" src="./src/app.js"></script>
+</body>
 </html>

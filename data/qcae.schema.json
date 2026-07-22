@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/qcae.schema.json",
+  "title": "QCAE instrument definition",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "items",
+    "subscales",
+    "variants",
+    "responseScale"
+  ],
+  "properties": {
+    "id": {
+      "const": "qcae"
+    },
+    "version": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "minItems": 31,
+      "maxItems": 31,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "reverseScored",
+          "subscale",
+          "text"
+        ]
+      }
+    },
+    "variants": {
+      "type": "object"
+    },
+    "subscales": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "responseScale": {
+      "type": "object"
+    }
+  }
+}

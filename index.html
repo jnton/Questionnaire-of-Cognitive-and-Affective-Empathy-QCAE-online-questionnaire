@@ -3,15 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A privacy-first, transparent online implementation of the Questionnaire of Cognitive and Affective Empathy (QCAE).">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#f7f7f4">
+  <meta name="description" content="Take and score the multilingual Questionnaire of Cognitive and Affective Empathy (QCAE) privately in your browser. Free, transparent, and research-oriented.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#245c48">
+  <meta name="application-name" content="QCAE Online Questionnaire">
   <meta name="citation_title" content="The QCAE: A Questionnaire of Cognitive and Affective Empathy">
   <meta name="citation_doi" content="10.1080/00223891.2010.528484">
   <meta name="tdm-reservation" content="0">
   <meta name="tdm-policy" content="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/ai-use-policy.v1.json">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QCAE Online Questionnaire">
+  <meta property="og:title" content="QCAE Online Questionnaire">
+  <meta property="og:description" content="A private, multilingual online implementation of the Questionnaire of Cognitive and Affective Empathy, with local scoring and exports.">
+  <meta property="og:url" content="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/">
+  <meta property="og:image" content="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/assets/qcae-social-card.svg">
+  <meta property="og:image:alt" content="QCAE Online Questionnaire — cognitive and affective empathy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QCAE Online Questionnaire">
+  <meta name="twitter:description" content="Private multilingual QCAE administration, local scoring, and machine-readable exports.">
+  <meta name="twitter:image" content="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/assets/qcae-social-card.svg">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
   <link rel="canonical" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/">
+  <link rel="alternate" hreflang="x-default" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/">
+  <link rel="alternate" hreflang="en" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/en/">
+  <link rel="alternate" hreflang="fr" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/fr/">
+  <link rel="alternate" hreflang="pt" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/pt/">
+  <link rel="alternate" hreflang="de" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/de/">
+  <link rel="alternate" hreflang="tr" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/tr/">
+  <link rel="alternate" hreflang="ru" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/ru/">
+  <link rel="alternate" hreflang="ko" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/ko/">
+  <link rel="alternate" hreflang="sr-Latn" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/sr/">
   <link rel="alternate" type="application/json" title="QCAE base instrument definition" href="./data/qcae.v1.json">
   <link rel="alternate" type="application/json" title="QCAE validated locale packs" href="./data/locale-packs.v1.json">
   <link rel="alternate" type="application/json" title="QCAE reference registry" href="./data/references.v1.json">
@@ -19,9 +40,34 @@
   <link rel="alternate" type="application/json" title="QCAE agent capabilities" href="./data/capabilities.v1.json">
   <link rel="help" href="./agents.html">
   <link rel="license" href="./rights.html">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/styles.css">
   <link rel="manifest" href="./manifest.webmanifest">
-  <title>Questionnaire of Cognitive and Affective Empathy — QCAE</title>
+  <title>QCAE Online Questionnaire — Cognitive and Affective Empathy Test</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "QCAE Online Questionnaire",
+    "alternateName": "Questionnaire of Cognitive and Affective Empathy",
+    "url": "https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/",
+    "description": "A privacy-first multilingual implementation of the Questionnaire of Cognitive and Affective Empathy with deterministic local scoring.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any modern web browser",
+    "browserRequirements": "Requires JavaScript for interactive administration; crawlable explanatory content is available without JavaScript.",
+    "isAccessibleForFree": true,
+    "inLanguage": ["en", "fr", "pt-PT", "de", "tr", "ru", "ko", "sr-Latn"],
+    "softwareVersion": "1.2.0",
+    "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+    "codeRepository": "https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire",
+    "citation": {
+      "@type": "ScholarlyArticle",
+      "name": "The QCAE: A Questionnaire of Cognitive and Affective Empathy",
+      "identifier": "https://doi.org/10.1080/00223891.2010.528484"
+    },
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#app">Skip to questionnaire</a>
@@ -38,19 +84,34 @@
     </label>
   </header>
   <main id="app" class="container" tabindex="-1" data-qcae-app="true">
-    <p id="status" role="status">Loading questionnaire…</p>
-    <noscript>This questionnaire requires JavaScript. No external scripts or trackers are used.</noscript>
+    <article class="seo-fallback">
+      <header class="hero">
+        <p class="eyebrow">QCAE · Cognitive and affective empathy</p>
+        <h1>Questionnaire of Cognitive and Affective Empathy</h1>
+        <p class="lead">Complete the QCAE online and calculate raw cognitive-empathy, affective-empathy, subscale, and total scores entirely in your browser.</p>
+      </header>
+      <section class="info-grid" aria-label="Questionnaire features">
+        <article class="info-card"><span class="info-icon" aria-hidden="true">✓</span><h2>Research-oriented</h2><p>Published scoring rules, language-specific versions, validation references, and transparent source history.</p></article>
+        <article class="info-card"><span class="info-icon" aria-hidden="true">○</span><h2>Private by design</h2><p>Responses remain in browser memory. This deployment has no account, analytics, database, or response-submission endpoint.</p></article>
+        <article class="info-card"><span class="info-icon" aria-hidden="true">↗</span><h2>Open formats</h2><p>Local scoring plus JSON, CSV, clipboard, and print/PDF exports. Machine-readable schemas and APIs are available.</p></article>
+      </section>
+      <section class="seo-section">
+        <h2>Available languages</h2>
+        <p><a href="./en/">English</a> · <a href="./fr/">Français</a> · <a href="./pt/">Português</a> · <a href="./de/">Deutsch</a> · <a href="./tr/">Türkçe</a> · <a href="./ru/">Русский</a> · <a href="./ko/">한국어</a> · <a href="./sr/">Srpski</a></p>
+      </section>
+      <section class="seo-section">
+        <h2>What the QCAE reports</h2>
+        <p>The QCAE measures perspective taking, online simulation, emotion contagion, proximal responsivity, and peripheral responsivity. This implementation reports raw scores rather than diagnoses, percentiles, or unsupported clinical classifications.</p>
+      </section>
+      <p class="actions"><a class="button button-primary" href="./en/">Choose a language and start</a></p>
+      <noscript><p class="notice"><strong>JavaScript is required for the interactive questionnaire.</strong> The explanatory pages, references, source files, and scoring documentation remain available without JavaScript.</p></noscript>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>Privacy-first: responses stay in your browser.</p>
       <nav aria-label="Project information">
-        <a href="./about.html">About</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./rights.html">Rights</a>
-        <a href="./references.html">References</a>
-        <a href="./agents.html">Agents</a>
-        <a href="https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire">Source code</a>
+        <a href="./about.html">About</a><a href="./privacy.html">Privacy</a><a href="./rights.html">Rights</a><a href="./references.html">References</a><a href="./agents.html">Agents</a><a href="https://github.com/jnton/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire">Source code</a>
       </nav>
     </div>
   </footer>

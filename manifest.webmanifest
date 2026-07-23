@@ -1,10 +1,28 @@
 {
-  "name": "Questionnaire of Cognitive and Affective Empathy",
+  "id": "./",
+  "name": "QCAE Online Questionnaire",
   "short_name": "QCAE",
+  "description": "Privacy-first multilingual Questionnaire of Cognitive and Affective Empathy with local scoring.",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f7f7f4",
-  "theme_color": "#f7f7f4",
+  "theme_color": "#245c48",
   "lang": "en",
-  "description": "Privacy-first QCAE questionnaire and scoring."
+  "categories": ["education", "medical", "utilities"],
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {"name": "English questionnaire", "url": "./?lang=en"},
+    {"name": "French questionnaire", "url": "./?lang=fr"},
+    {"name": "Portuguese questionnaire", "url": "./?lang=pt-PT"},
+    {"name": "Russian questionnaire", "url": "./?lang=ru"},
+    {"name": "Korean questionnaire", "url": "./?lang=ko"}
+  ]
 }

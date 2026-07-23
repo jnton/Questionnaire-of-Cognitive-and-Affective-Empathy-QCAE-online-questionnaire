@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/about.html</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/privacy.html</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/rights.html</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/references.html</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/agents.html</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/llms.txt</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/llms-full.txt</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/capabilities.v1.json</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/qcae.v1.json</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/references.v1.json</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/responses.schema.json</loc></url>
-  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/data/results.schema.json</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/</loc><lastmod>2026-07-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/de/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/tr/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/ko/"/>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/sr/"/>
+  </url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/en/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/fr/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/pt/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/de/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/tr/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/ru/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/ko/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/sr/</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/about.html</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/privacy.html</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/rights.html</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/references.html</loc><lastmod>2026-07-23</lastmod></url>
+  <url><loc>https://jnton.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/agents.html</loc><lastmod>2026-07-23</lastmod></url>
 </urlset>

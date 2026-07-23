@@ -60,12 +60,16 @@ h1 { font-size: clamp(2rem, 6vw, 3.8rem); line-height: 1.05; letter-spacing: -.0
 .consent-row input { width: 1.2rem; height: 1.2rem; margin-top: .15rem; accent-color: var(--accent); }
 .actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .75rem; margin-top: 1.5rem; }
 .actions-between { justify-content: space-between; }
-.button { min-height: 46px; border-radius: 12px; border: 1px solid transparent; padding: .7rem 1.15rem; font-weight: 750; cursor: pointer; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; border-radius: 12px; border: 1px solid transparent; padding: .7rem 1.15rem; font-weight: 750; cursor: pointer; text-decoration: none; }
 .button:disabled { opacity: .5; cursor: not-allowed; }
 .button-primary { background: var(--accent); color: var(--bg); }
 .button-primary:hover:not(:disabled) { background: var(--accent-strong); }
 .button-secondary { background: var(--surface); color: var(--text); border-color: var(--border); }
 .button-secondary:hover { background: var(--surface-muted); }
+.seo-fallback { max-width: 860px; margin-inline: auto; }
+.seo-section { padding: 1.25rem 0; border-top: 1px solid var(--border); }
+.seo-section h2 { margin: 0 0 .55rem; font-size: clamp(1.25rem, 3vw, 1.65rem); }
+.seo-section p { margin: 0; color: var(--muted); }
 .details { border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem; color: var(--muted); }
 .details summary { color: var(--text); cursor: pointer; font-weight: 700; }
 .progress-wrap { margin-bottom: 1rem; }

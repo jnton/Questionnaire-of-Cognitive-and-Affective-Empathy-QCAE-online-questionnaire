@@ -83,7 +83,8 @@
       <select id="language-select"></select>
     </label>
   </header>
-  <main id="app" class="container" tabindex="-1" data-qcae-app="true">
+  <main id="app" class="container" tabindex="-1" data-qcae-app="true" aria-busy="true">
+    <p id="status" class="visually-hidden" role="status">Loading questionnaire…</p>
     <article class="seo-fallback">
       <header class="hero">
         <p class="eyebrow">QCAE · Cognitive and affective empathy</p>
@@ -103,7 +104,6 @@
         <h2>What the QCAE reports</h2>
         <p>The QCAE measures perspective taking, online simulation, emotion contagion, proximal responsivity, and peripheral responsivity. This implementation reports raw scores rather than diagnoses, percentiles, or unsupported clinical classifications.</p>
       </section>
-      <p class="actions"><a class="button button-primary" href="./en/">Choose a language and start</a></p>
       <noscript><p class="notice"><strong>JavaScript is required for the interactive questionnaire.</strong> The explanatory pages, references, source files, and scoring documentation remain available without JavaScript.</p></noscript>
     </article>
   </main>

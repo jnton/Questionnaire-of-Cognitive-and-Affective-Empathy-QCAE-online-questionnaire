@@ -50,6 +50,17 @@ test("homepage exposes crawlable content, social metadata, structured data, and 
   }
 });
 
+test("the application shell can replace its SEO fallback or surface a startup failure", async () => {
+  const index = await read("../index.html");
+  const app = await read("../src/app.js");
+  assert.match(index, /id="app"[^>]*aria-busy="true"/);
+  assert.match(index, /id="status"[^>]*role="status"/);
+  assert.match(app, /if \(!els\.app \|\| !els\.language\)/);
+  assert.match(app, /els\.status\?\.remove\(\)/);
+  assert.match(app, /function showFatalError\(\)/);
+  assert.match(app, /document\.createDocumentFragment\(\)/);
+});
+
 test("every supported language has a static indexable landing page", async () => {
   for (const locale of locales) {
     const page = await read(`../${locale}/index.html`);

@@ -19,6 +19,17 @@ const els = {
   status: document.querySelector("#status")
 };
 
+function showFatalError() {
+  if (!els.app) return;
+  const message = "The questionnaire data could not be loaded. Please reload the page.";
+  const status = els.status ?? h("p", { id: "status" });
+  status.textContent = message;
+  status.className = "fatal-error";
+  status.setAttribute("role", "alert");
+  if (!status.isConnected) els.app.prepend(status);
+  els.app.setAttribute("aria-busy", "false");
+}
+
 function supportedLocales() {
   return Object.keys(state.instrument?.variants ?? {});
 }
@@ -87,6 +98,12 @@ function variantNotice() {
 
 function renderIntro() {
   const notice = variantNotice();
+  const noticeElement = notice
+    ? h("aside", { class: "notice", role: "note" },
+      h("strong", {}, t("languageStatus")),
+      h("p", {}, notice)
+    )
+    : document.createDocumentFragment();
   const consent = h("input", { type: "checkbox", id: "consent" });
   const start = h("button", { id: "start-questionnaire", class: "button button-primary", type: "button", disabled: true, onClick: () => {
     state.screen = "question";
@@ -106,10 +123,7 @@ function renderIntro() {
       infoCard("○", t("privacyTitle"), t("privacyBody")),
       infoCard("§", t("rightsTitle"), t("rightsBody"))
     ),
-    notice ? h("aside", { class: "notice", role: "note" },
-      h("strong", {}, t("languageStatus")),
-      h("p", {}, notice)
-    ) : null,
+    noticeElement,
     h("label", { class: "consent-row", for: "consent" }, consent, h("span", {}, t("consent"))),
     h("div", { class: "actions" }, start),
     sourceDetails()
@@ -348,6 +362,7 @@ function render() {
 
 async function init() {
   try {
+    if (!els.app || !els.language) throw new Error("The questionnaire application shell is unavailable.");
     const [instrumentResponse, uiResponse, referencesResponse] = await Promise.all([
       fetch("./data/qcae.v1.json", { cache: "no-store" }),
       fetch("./data/ui.json", { cache: "no-store" }),
@@ -370,7 +385,8 @@ async function init() {
       history.replaceState(null, "", url);
       render();
     });
-    els.status.remove();
+    els.status?.remove();
+    els.app.setAttribute("aria-busy", "false");
     globalThis.QCAE_APP = Object.freeze({
       version: state.instrument.version,
       capabilitiesUrl: new URL("./data/capabilities.v1.json", location.href).href,
@@ -382,8 +398,7 @@ async function init() {
     render();
   } catch (error) {
     console.error(error);
-    els.status.textContent = "The questionnaire data could not be loaded. Please reload the page.";
-    els.status.className = "fatal-error";
+    showFatalError();
   }
 }
 
